@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--(c) XBRL US, Inc. 2016;
+ All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
+ 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:wip="http://xbrl.us/wip/2016-01-31" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" blockDefault="" elementFormDefault="qualified" finalDefault="" targetNamespace="http://xbrl.us/wip/2016-01-31">
+   <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd"/>
+   <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+   <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+   <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xsd:import namespace="http://xbrl.us/wip-roles/2016-01-31" schemaLocation="wip-roles-2016-01-31.xsd"/>
+   <xsd:annotation>
+      <xsd:documentation>This file is the schema file for work in process (wip). The DTS starting with this schema file will not contain any linkbases.</xsd:documentation>
+   </xsd:annotation>
+   <xsd:element abstract="true" id="wip_WorkInProcessTable" name="WorkInProcessTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractNumberAxis" name="ContractNumberAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrldt:typedDomainRef="#wip_ContractNumberAxis.domain" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractDetailsLineItems" name="ContractDetailsLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractNumber" name="ContractNumber" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractName" name="ContractName" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractCostsForPeriod" name="ContractCostsForPeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractRevenueEarnedToDate" name="ContractRevenueEarnedToDate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractRevenueRevenueToComplete" name="ContractRevenueRevenueToComplete" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractRevenueEstimatedRevenue" name="ContractRevenueEstimatedRevenue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractGrossProfitFromInceptionToDate" name="ContractGrossProfitFromInceptionToDate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractGrossProfitTotalContract" name="ContractGrossProfitTotalContract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractGrossProfitToBeEarned" name="ContractGrossProfitToBeEarned" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractGrossProfitPercentTotalContract" name="ContractGrossProfitPercentTotalContract" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_PercentageComplete" name="PercentageComplete" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_BillingsInExcessOfCostAndEarnings" name="BillingsInExcessOfCostAndEarnings" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_CostsAndEarningsInExcessOfBillings" name="CostsAndEarningsInExcessOfBillings" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractLossRecognitionFlag" name="ContractLossRecognitionFlag" nillable="true" substitutionGroup="xbrli:item" type="xbrli:booleanItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_CostsAndEstimatedEarningsInExcessOfBillingsNet" name="CostsAndEstimatedEarningsInExcessOfBillingsNet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_MiscellaneousContractsFlag" name="MiscellaneousContractsFlag" nillable="true" substitutionGroup="xbrli:item" type="xbrli:booleanItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractBillings" name="ContractBillings" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractBillingsFromInceptionToDate" name="ContractBillingsFromInceptionToDate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractCostsIncurredToDate" name="ContractCostsIncurredToDate" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractCostsEstimatedCost" name="ContractCostsEstimatedCost" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractCostsEstimatedCostToComplete" name="ContractCostsEstimatedCostToComplete" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
+   <xsd:element abstract="false" id="wip_ContractCompleteFlag" name="ContractCompleteFlag" nillable="true" substitutionGroup="xbrli:item" type="xbrli:booleanItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractCompleteOrIncompleteAxis" name="ContractCompleteOrIncompleteAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractInProcessMember" name="ContractInProcessMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractCompleteMember" name="ContractCompleteMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractDomain" name="ContractDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_WorkInProcessScheduleTableTextBlock" name="WorkInProcessScheduleTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractBasicInformation" name="ContractBasicInformation" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractPercentCompleteInformation" name="ContractPercentCompleteInformation" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_PercentCompleteBasis" name="PercentCompleteBasis" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractBondedFlag" name="ContractBondedFlag" nillable="true" substitutionGroup="xbrli:item" type="xbrli:booleanItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractNumberAxis.domain" name="ContractNumberAxis.domain" nillable="true" type="xsd:positiveInteger"/>
+   <xsd:element abstract="true" id="wip_ContractFromInceptionToDateAbstract" name="ContractFromInceptionToDateAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractToCompleteAbstract" name="ContractToCompleteAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="true" id="wip_ContractEstimateAbstract" name="ContractEstimateAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+</xsd:schema>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--(c) XBRL US, Inc. 2016;
+ All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
+ 
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+   <link:roleRef roleURI="http://xbrl.us/wip/role/disclosure/WorkInProcessTotal" xlink:href="../elts/wip-roles-2016-01-31.xsd#workInProcessTotal" xlink:type="simple"/>
+   <link:roleRef roleURI="http://xbrl.us/wip/role/disclosure/WorkInProcess" xlink:href="../elts/wip-roles-2016-01-31.xsd#workInProcess_1901741" xlink:type="simple"/>
+   <link:calculationLink xlink:role="http://xbrl.us/wip/role/disclosure/WorkInProcess" xlink:type="extended">
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractRevenueEarnedToDate" xlink:label="lbl_ContractRevenueEarnedToDate" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractRevenueEstimatedRevenue" xlink:label="lbl_ContractRevenueEstimatedRevenue" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractRevenueEstimatedRevenue" xlink:to="lbl_ContractRevenueEarnedToDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractRevenueRevenueToComplete" xlink:label="lbl_ContractRevenueRevenueToComplete" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractRevenueEstimatedRevenue" xlink:to="lbl_ContractRevenueRevenueToComplete" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractGrossProfitFromInceptionToDate" xlink:label="lbl_ContractGrossProfitFromInceptionToDate" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractGrossProfitTotalContract" xlink:label="lbl_ContractGrossProfitTotalContract" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitTotalContract" xlink:to="lbl_ContractGrossProfitFromInceptionToDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractGrossProfitToBeEarned" xlink:label="lbl_ContractGrossProfitToBeEarned" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitTotalContract" xlink:to="lbl_ContractGrossProfitToBeEarned" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_Liabilities" xlink:label="lbl_Liabilities" xlink:type="locator"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_LiabilitiesAndStockholdersEquity" xlink:label="lbl_LiabilitiesAndStockholdersEquity" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_LiabilitiesAndStockholdersEquity" xlink:to="lbl_Liabilities" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_BillingsInExcessOfCost" xlink:label="lbl_BillingsInExcessOfCost" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_Liabilities" xlink:to="lbl_BillingsInExcessOfCost" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_BillingsInExcessOfCostAndEarnings" xlink:label="lbl_BillingsInExcessOfCostAndEarnings" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_BillingsInExcessOfCost" xlink:to="lbl_BillingsInExcessOfCostAndEarnings" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_Assets" xlink:label="lbl_Assets" xlink:type="locator"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_CostsInExcessOfBillingsOnUncompletedContractsOrPrograms" xlink:label="lbl_CostsInExcessOfBillingsOnUncompletedContractsOrPrograms" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_Assets" xlink:to="lbl_CostsInExcessOfBillingsOnUncompletedContractsOrPrograms" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_CostsAndEarningsInExcessOfBillings" xlink:label="lbl_CostsAndEarningsInExcessOfBillings" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_CostsInExcessOfBillingsOnUncompletedContractsOrPrograms" xlink:to="lbl_CostsAndEarningsInExcessOfBillings" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsIncurredToDate" xlink:label="lbl_ContractCostsIncurredToDate" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsEstimatedCost" xlink:label="lbl_ContractCostsEstimatedCost" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractCostsEstimatedCost" xlink:to="lbl_ContractCostsEstimatedCostToComplete" xlink:type="arc"/>
+      <link:calculationArc order="0.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractCostsEstimatedCost" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsEstimatedCostToComplete" xlink:label="lbl_ContractCostsEstimatedCostToComplete" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitFromInceptionToDate" xlink:to="lbl_ContractRevenueEarnedToDate" xlink:type="arc"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitFromInceptionToDate" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitToBeEarned" xlink:to="lbl_ContractRevenueRevenueToComplete" xlink:type="arc"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitToBeEarned" xlink:to="lbl_ContractCostsEstimatedCostToComplete" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_CostsAndEstimatedEarningsInExcessOfBillingsNet" xlink:label="lbl_CostsAndEstimatedEarningsInExcessOfBillingsNet" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillingsFromInceptionToDate" xlink:label="lbl_ContractBillingsFromInceptionToDate" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_CostsAndEstimatedEarningsInExcessOfBillingsNet" xlink:to="lbl_ContractBillingsFromInceptionToDate" xlink:type="arc"/>
+      <link:calculationArc order="1.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_CostsAndEstimatedEarningsInExcessOfBillingsNet" xlink:to="lbl_ContractRevenueEarnedToDate" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_Revenues" xlink:label="lbl_Revenues" xlink:type="locator"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_GrossProfit" xlink:label="lbl_GrossProfit" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_GrossProfit" xlink:to="lbl_Revenues" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_CostOfRevenue" xlink:label="lbl_CostOfRevenue" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_GrossProfit" xlink:to="lbl_CostOfRevenue" xlink:type="arc"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_CostsAndEarningsInExcessOfBillings" xlink:to="lbl_ContractBillingsFromInceptionToDate" xlink:type="arc"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_CostsAndEarningsInExcessOfBillings" xlink:to="lbl_ContractRevenueEarnedToDate" xlink:type="arc"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_BillingsInExcessOfCostAndEarnings" xlink:to="lbl_ContractRevenueEarnedToDate" xlink:type="arc"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_BillingsInExcessOfCostAndEarnings" xlink:to="lbl_ContractBillingsFromInceptionToDate" xlink:type="arc"/>
+   </link:calculationLink>
+   <link:calculationLink xlink:role="http://xbrl.us/wip/role/disclosure/WorkInProcessTotal" xlink:type="extended">
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractRevenueEstimatedRevenue" xlink:label="lbl_ContractRevenueEstimatedRevenue" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractGrossProfitTotalContract" xlink:label="lbl_ContractGrossProfitTotalContract" xlink:type="locator"/>
+      <link:calculationArc order="1.0" weight="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitTotalContract" xlink:to="lbl_ContractRevenueEstimatedRevenue" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsEstimatedCost" xlink:label="lbl_ContractCostsEstimatedCost" xlink:type="locator"/>
+      <link:calculationArc order="2.0" weight="-1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="lbl_ContractGrossProfitTotalContract" xlink:to="lbl_ContractCostsEstimatedCost" xlink:type="arc"/>
+   </link:calculationLink>
+</link:linkbase>

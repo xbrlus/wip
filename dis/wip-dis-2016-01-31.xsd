@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--(c) XBRL US, Inc. 2016;
+ All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
+ 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:wip-all="http://xbrl.us/wip-all/2016-01-31" xmlns:wip-dis="http://xbrl.us/dis/wip-dis/2016-01-31" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" blockDefault="" elementFormDefault="qualified" finalDefault="" targetNamespace="http://xbrl.us/dis/wip-dis/2016-01-31">
+   <xs:annotation>
+      <xs:appinfo>
+<link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-dis-pre-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple"/>
+<link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-dis-cal-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple"/>
+<link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-dis-def-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple"/>
+<link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-dis-form-2016-01-31.xml" xlink:title="Business rules" xlink:type="simple"/>
+
+</xs:appinfo>
+      <xs:documentation>
+                This file is the entry point file for the Work In Process Report Disclosure (wip).
+
+                The DTS starting with this entry point includes the following presentation, calculation, formula and definition linkbases:
+                910100 - Disclosure - Work In Process  (presentation)
+                910100 - Disclosure - Work In Process  (calculation)
+                910100 - Disclosure - Work In Process  (definition)
+                910100 - Disclosure - Work In Process  (formula)
+
+                </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+   <xs:import namespace="http://xbrl.us/wip-all/2016-01-31" schemaLocation="../elts/wip-all-2016-01-31.xsd"/>
+</xs:schema>
