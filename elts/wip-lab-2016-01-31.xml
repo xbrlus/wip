@@ -160,5 +160,15 @@
       <link:label id="id_199e2b3" xlink:label="lbl_label26862259" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Estimate [Abstract]</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractEstimateAbstract" xlink:label="lbl_ContractEstimateAbstract" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_label26862259" xlink:type="arc"/>
+
+      <link:label id="id_181938b" xlink:label="lbl_ContractStartDate_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Start Date</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#id_ContractStartDate" xlink:label="lbl_ContractStartDate" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractStartDate" xlink:to="lbl_ContractStartDate_labels" xlink:type="arc"/>
+      <link:label id="id_c92071" xlink:label="lbl_ContractStartDate_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Date that the contract started.</link:label>
+      <link:label id="id_7c0e6a" xlink:label="lbl_ContractEndDate_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract End Date</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#id_ContractEndDate" xlink:label="lbl_ContractEndDate" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractEndDate" xlink:to="lbl_ContractEndDate_labels" xlink:type="arc"/>
+      <link:label id="id_1d44d71" xlink:label="lbl_ContractEndDate_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Date that the contract is estimated to be completed.</link:label>
+
    </link:labelLink>
 </link:linkbase>
