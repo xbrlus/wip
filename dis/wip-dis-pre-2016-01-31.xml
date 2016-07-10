@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--(c) XBRL US, Inc. 2016;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
-
 <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
    <link:roleRef roleURI="http://xbrl.us/wip/role/disclosure/WorkInProcess" xlink:href="../elts/wip-roles-2016-01-31.xsd#workInProcess_1901741" xlink:type="simple"/>
    <link:presentationLink xlink:role="http://xbrl.us/wip/role/disclosure/WorkInProcess" xlink:type="extended">
@@ -91,8 +90,18 @@
       <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_GrossProfit" xlink:label="lbl_GrossProfit" xlink:type="locator"/>
       <link:presentationArc order="2.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsForPeriod" xlink:to="lbl_GrossProfit" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#id_ContractStartDate" xlink:label="lbl_ContractStartDate" xlink:type="locator"/>
-      <link:presentationArc order="7.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractStartDate" xlink:type="arc"/>
+      <link:presentationArc order="2.5" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractStartDate" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#id_ContractEndDate" xlink:label="lbl_ContractEndDate" xlink:type="locator"/>
-      <link:presentationArc order="8.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractEndDate" xlink:type="arc"/>
+      <link:presentationArc order="2.7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractEndDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractProjectManager" xlink:label="lbl_ContractProjectManager" xlink:type="locator"/>
+      <link:presentationArc order="2.8" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractProjectManager" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCustomerName" xlink:label="lbl_ContractCustomerName" xlink:type="locator"/>
+      <link:presentationArc order="2.9" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractCustomerName" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivablesAbstract" xlink:label="lbl_ContractReceivablesAbstract" xlink:type="locator"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:label="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="locator"/>
+      <link:presentationArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivableRetainage" xlink:label="lbl_ContractReceivableRetainage" xlink:type="locator"/>
+      <link:presentationArc order="2.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_ContractReceivableRetainage" xlink:type="arc"/>
+      <link:presentationArc order="5.2" preferredLabel="http://www.xbrl.org/2003/role/terseLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractReceivablesAbstract" xlink:type="arc"/>
    </link:presentationLink>
 </link:linkbase>

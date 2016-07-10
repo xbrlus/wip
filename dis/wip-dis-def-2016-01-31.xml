@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--(c) XBRL US, Inc. 2016;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
- 
 <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
    <link:roleRef roleURI="http://xbrl.us/wip/role/disclosure/WorkInProcessTotal" xlink:href="../elts/wip-roles-2016-01-31.xsd#workInProcessTotal" xlink:type="simple"/>
    <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default" xlink:type="simple"/>
@@ -35,7 +34,6 @@
       <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="lbl_WorkInProcessTable" xlink:to="lbl_ContractNumberAxis" xlink:type="arc"/>
       <link:definitionArc order="2.0" xbrldt:contextElement="segment" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_WorkInProcessTable" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillings" xlink:label="lbl_ContractBillings" xlink:type="locator"/>
-      <link:definitionArc order="7.5" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractBillings" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillingsFromInceptionToDate" xlink:label="lbl_ContractBillingsFromInceptionToDate" xlink:type="locator"/>
       <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBillings" xlink:to="lbl_ContractBillingsFromInceptionToDate" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_BillingsInExcessOfCostAndEarnings" xlink:label="lbl_BillingsInExcessOfCostAndEarnings" xlink:type="locator"/>
@@ -80,6 +78,21 @@
       <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractCostsEstimatedCost" xlink:type="arc"/>
       <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractGrossProfitTotalContract" xlink:type="arc"/>
       <link:definitionArc order="4.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractGrossProfitPercentTotalContract" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#id_ContractStartDate" xlink:label="lbl_ContractStartDate" xlink:type="locator"/>
+      <link:definitionArc order="2.5" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractStartDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#id_ContractEndDate" xlink:label="lbl_ContractEndDate" xlink:type="locator"/>
+      <link:definitionArc order="2.7" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractEndDate" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractProjectManager" xlink:label="lbl_ContractProjectManager" xlink:type="locator"/>
+      <link:definitionArc order="2.8" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractProjectManager" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCustomerName" xlink:label="lbl_ContractCustomerName" xlink:type="locator"/>
+      <link:definitionArc order="2.9" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_ContractCustomerName" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivablesAbstract" xlink:label="lbl_ContractReceivablesAbstract" xlink:type="locator"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:label="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="locator"/>
+      <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivableRetainage" xlink:label="lbl_ContractReceivableRetainage" xlink:type="locator"/>
+      <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_ContractReceivableRetainage" xlink:type="arc"/>
+      <link:definitionArc order="7.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractReceivablesAbstract" xlink:type="arc"/>
+      <link:definitionArc order="6.7" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractBillings" xlink:type="arc"/>
    </link:definitionLink>
    <link:definitionLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractDomain" xlink:label="lbl_ContractDomain" xlink:type="locator"/>
@@ -118,7 +131,6 @@
       <link:definitionArc order="4.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractCostsForPeriod" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_PercentageComplete" xlink:label="lbl_PercentageComplete" xlink:type="locator"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillings" xlink:label="lbl_ContractBillings" xlink:type="locator"/>
-      <link:definitionArc order="6.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractBillings" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillingsFromInceptionToDate" xlink:label="lbl_ContractBillingsFromInceptionToDate" xlink:type="locator"/>
       <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractBillings" xlink:to="lbl_ContractBillingsFromInceptionToDate" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_BillingsInExcessOfCostAndEarnings" xlink:label="lbl_BillingsInExcessOfCostAndEarnings" xlink:type="locator"/>
@@ -146,5 +158,12 @@
       <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractCostsEstimatedCost" xlink:type="arc"/>
       <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractGrossProfitTotalContract" xlink:type="arc"/>
       <link:definitionArc order="4.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_ContractGrossProfitPercentTotalContract" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivablesAbstract" xlink:label="lbl_ContractReceivablesAbstract" xlink:type="locator"/>
+      <link:definitionArc order="5.2" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractReceivablesAbstract" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:label="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="locator"/>
+      <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_AccountsReceivableBilledForLongTermContractsOrPrograms" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivableRetainage" xlink:label="lbl_ContractReceivableRetainage" xlink:type="locator"/>
+      <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_ContractReceivableRetainage" xlink:type="arc"/>
+      <link:definitionArc order="4.8" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractBillings" xlink:type="arc"/>
    </link:definitionLink>
 </link:linkbase>

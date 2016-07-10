@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--(c) XBRL US, Inc. 2016;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
-
- <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
    <link:roleRef roleURI="http://fasb.org/us-gaap/role/label/axisDefault" xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-roles-2016-01-31.xsd#axisDefault" xlink:type="simple"/>
    <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:label id="id_c3b831" xlink:label="lbl_WorkInProcessTable_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Work In Process Schedule [Table]</link:label>
@@ -160,7 +159,6 @@
       <link:label id="id_199e2b3" xlink:label="lbl_label26862259" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Estimate [Abstract]</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractEstimateAbstract" xlink:label="lbl_ContractEstimateAbstract" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractEstimateAbstract" xlink:to="lbl_label26862259" xlink:type="arc"/>
-
       <link:label id="id_181938b" xlink:label="lbl_ContractStartDate_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Start Date</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#id_ContractStartDate" xlink:label="lbl_ContractStartDate" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractStartDate" xlink:to="lbl_ContractStartDate_labels" xlink:type="arc"/>
@@ -169,6 +167,21 @@
       <link:loc xlink:href="wip-2016-01-31.xsd#id_ContractEndDate" xlink:label="lbl_ContractEndDate" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractEndDate" xlink:to="lbl_ContractEndDate_labels" xlink:type="arc"/>
       <link:label id="id_1d44d71" xlink:label="lbl_ContractEndDate_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Date that the contract is estimated to be completed.</link:label>
-
+      <link:label id="id_271bde" xlink:label="lbl_ContractProjectManager_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Project Manager</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractProjectManager" xlink:label="lbl_ContractProjectManager" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractProjectManager" xlink:to="lbl_ContractProjectManager_labels" xlink:type="arc"/>
+      <link:label id="id_1779782" xlink:label="lbl_ContractProjectManager_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Name of the project manager overseeing the contract.</link:label>
+      <link:label id="id_11db251" xlink:label="lbl_ContractCustomerName_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Customer Name</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCustomerName" xlink:label="lbl_ContractCustomerName" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCustomerName" xlink:to="lbl_ContractCustomerName_labels" xlink:type="arc"/>
+      <link:label id="id_83a7bf" xlink:label="lbl_ContractCustomerName_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Name of the contract customer.</link:label>
+      <link:label id="id_1a0d574" xlink:label="lbl_label27317620" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The name of the city where the contract work is actually being perfomed</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractLocationCity" xlink:label="lbl_ContractLocationCity" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractLocationCity" xlink:to="lbl_label27317620" xlink:type="arc"/>
+   </link:labelLink>
+   <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
+      <link:label id="id_1381bfd" xlink:label="lbl_label20454397" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Contract Receivables [Abstract]</link:label>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ContractReceivablesAbstract" xlink:label="lbl_ContractReceivablesAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractReceivablesAbstract" xlink:to="lbl_label20454397" xlink:type="arc"/>
    </link:labelLink>
 </link:linkbase>
