@@ -23,8 +23,6 @@
       <link:label id="id_147b560" xlink:label="lbl_label16102948" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of estimated cost remaining for the specified contract.</link:label>
       <link:label id="id_43897a" xlink:label="lbl_label17269457" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount expected to be recognized in earnings for the specified contract over its life.</link:label>
       <link:label id="id_1de2225" xlink:label="lbl_label31334949" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Details for Period [Abstract]</link:label>
-      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCostsForPeriod" xlink:label="lbl_ContractCostsForPeriod" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCostsForPeriod" xlink:to="lbl_label31334949" xlink:type="arc"/>
       <link:label id="id_1757dc6" xlink:label="lbl_ContractRevenueEarnedToDate_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Revenue, Earned to Date</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractRevenueEarnedToDate" xlink:label="lbl_ContractRevenueEarnedToDate" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractRevenueEarnedToDate" xlink:to="lbl_ContractRevenueEarnedToDate_labels" xlink:type="arc"/>
@@ -87,8 +85,6 @@
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_MiscellaneousContractsFlag" xlink:to="lbl_MiscellaneousContractsFlag_labels" xlink:type="arc"/>
       <link:label id="id_1bd66c1" xlink:label="lbl_MiscellaneousContractsFlag_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Indicate true if the contract represents a pool of contracts under a preset amount. Set to false if a single contract.  The default is false.</link:label>
       <link:label id="id_107cbf1" xlink:label="lbl_label17288177" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Billings [Abstract]</link:label>
-      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractBillings" xlink:label="lbl_ContractBillings" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBillings" xlink:to="lbl_label17288177" xlink:type="arc"/>
       <link:label id="id_24015a" xlink:label="lbl_ContractBillingsFromInceptionToDate_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Billings, from Inception to Date</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractBillingsFromInceptionToDate" xlink:label="lbl_ContractBillingsFromInceptionToDate" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBillingsFromInceptionToDate" xlink:to="lbl_ContractBillingsFromInceptionToDate_labels" xlink:type="arc"/>
@@ -135,11 +131,7 @@
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_WorkInProcessScheduleTableTextBlock" xlink:to="lbl_label4262340" xlink:type="arc"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_WorkInProcessScheduleTableTextBlock" xlink:to="lbl_label30051367" xlink:type="arc"/>
       <link:label id="id_199f87a" xlink:label="lbl_label26867834" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Basic Information [Abstract]</link:label>
-      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractBasicInformation" xlink:label="lbl_ContractBasicInformation" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBasicInformation" xlink:to="lbl_label26867834" xlink:type="arc"/>
       <link:label id="id_1a05438" xlink:label="lbl_label27284536" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Percent Complete Information [Abstract]</link:label>
-      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractPercentCompleteInformation" xlink:label="lbl_ContractPercentCompleteInformation" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractPercentCompleteInformation" xlink:to="lbl_label27284536" xlink:type="arc"/>
       <link:label id="id_1fb49f1" xlink:label="lbl_PercentCompleteBasis_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Percent Complete Basis</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_PercentCompleteBasis" xlink:label="lbl_PercentCompleteBasis" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_PercentCompleteBasis" xlink:to="lbl_PercentCompleteBasis_labels" xlink:type="arc"/>
@@ -175,9 +167,38 @@
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCustomerName" xlink:label="lbl_ContractCustomerName" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCustomerName" xlink:to="lbl_ContractCustomerName_labels" xlink:type="arc"/>
       <link:label id="id_83a7bf" xlink:label="lbl_ContractCustomerName_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Name of the contract customer.</link:label>
-      <link:label id="id_1a0d574" xlink:label="lbl_label27317620" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The name of the city where the contract work is actually being perfomed</link:label>
+      <link:label id="id_1a0d574" xlink:label="lbl_ContractLocationCity_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The name of the city where the contract work is actually being performed</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractLocationCity" xlink:label="lbl_ContractLocationCity" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractLocationCity" xlink:to="lbl_label27317620" xlink:type="arc"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractLocationCity" xlink:to="lbl_ContractLocationCity_labels" xlink:type="arc"/>
+      <link:label id="id_1a0d575" xlink:label="lbl_ContractLocationState_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The name of the state where the contract work is actually being perfomed</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractLocationState" xlink:label="lbl_ContractLocationState" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractLocationState" xlink:to="lbl_ContractLocationState_labels" xlink:type="arc"/>
+      <link:label id="id_1bd44d5" xlink:label="lbl_ContractLocationCity_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Location, City</link:label>
+      <link:label id="id_14f3ccc" xlink:label="lbl_ContractLocationState_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Location, State</link:label>
+      <link:label id="id_419468" xlink:label="lbl_ContractRevenueRevenueToComplete_labels" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Backlog</link:label>
+      <link:label id="id_1e84104" xlink:label="lbl_label31998212" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Performance [Abstract]</link:label>
+      <link:label id="id_132c31e" xlink:label="lbl_ContractAccruedLoss_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Accrued Loss</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractAccruedLoss" xlink:label="lbl_ContractAccruedLoss" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractAccruedLoss" xlink:to="lbl_ContractAccruedLoss_labels" xlink:type="arc"/>
+      <link:label id="id_16a13e7" xlink:label="lbl_ContractAccruedLoss_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Accrual for the expected loss on a contract.</link:label>
+      <link:label id="id_11dac1f" xlink:label="lbl_ContractGainFade_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Gain (Fade)</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractGainFade" xlink:label="lbl_ContractGainFade" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractGainFade" xlink:to="lbl_ContractGainFade_labels" xlink:type="arc"/>
+      <link:label id="id_1c181d8" xlink:label="lbl_ContractGainFade_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The gain or fade on the estimated gross profit over the period.</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractPerformanceAbstract" xlink:label="lbl_ContractPerformanceAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_label31998212" xlink:type="arc"/>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractBillingsAbstract" xlink:label="lbl_ContractBillingsAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBillingsAbstract" xlink:to="lbl_label17288177" xlink:type="arc"/>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractBasicInformationAbstract" xlink:label="lbl_ContractBasicInformationAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBasicInformationAbstract" xlink:to="lbl_label26867834" xlink:type="arc"/>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCostsForPeriodAbstract" xlink:label="lbl_ContractCostsForPeriodAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCostsForPeriodAbstract" xlink:to="lbl_label31334949" xlink:type="arc"/>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractPercentCompleteInformationAbstract" xlink:label="lbl_ContractPercentCompleteInformationAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractPercentCompleteInformationAbstract" xlink:to="lbl_label27284536" xlink:type="arc"/>
+      <link:label id="id_1276870" xlink:label="lbl_ContractPermanentJobBorrow_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Permanent Job Borrow</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractPermanentJobBorrow" xlink:to="lbl_ContractPermanentJobBorrow_labels" xlink:type="arc"/>
+      <link:label id="id_986b5f" xlink:label="lbl_ContractPermanentJobBorrow_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The amount that Billings in Excess of Costs and Estimated Earnings exceeds the estimated Gross Profit on the contract.</link:label>
    </link:labelLink>
    <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:label id="id_1381bfd" xlink:label="lbl_label20454397" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Contract Receivables [Abstract]</link:label>

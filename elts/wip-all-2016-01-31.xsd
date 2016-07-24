@@ -13,7 +13,7 @@
       <xsd:appinfo>
         <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-ref-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:type="simple"/>
   		</xsd:appinfo>
-      <xsd:documentation>This file is an entry point for work in process (wip) including all the us-gaap files. The DTS starting with this entry point includes the concepts defined in te work in process (wip) and us-gaap (us-gaap) with their standard, period start, period end,
+      <xsd:documentation>This file is an entry point for work in process (wip) including all the us-gaap files. The DTS starting with this entry point includes the concepts defined in the work in process (wip) and us-gaap (us-gaap) with their standard, period start, period end,
       total, axis default, documentation, deprecated label and deprecated date labels. It will also include references. It will not include presentation, calculation or definition linkbases.</xsd:documentation>
    </xsd:annotation>
 </xsd:schema>
