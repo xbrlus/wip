@@ -1531,7 +1531,7 @@
 
 	</generic:link>
 
-
+	
 	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 
          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
@@ -5214,6 +5214,1407 @@
     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
      </generic:link>
 
+	 " <!-- Member Aggregation - Complete Contract - AccountsReceivableBilledForLongTermContractsOrPrograms -->
+	  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+	          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+	            id='RULE064_MemberAggregation_ContractComplete_AccountsReceivableBilledForLongTermContractsOrPrograms_Foots'
+	            aspectModel='dimensional'
+	            implicitFiltering='true'
+	            test='$Total eq sum($Each)' />
 
+	     <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+	         xlink:from='ASSERTION_RollUp'
+	         xlink:to='ASSERTION_Label'
+	         order='1.0'/>
+
+	     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+	         xml:lang='en'>Contract Complete AccountsReceivableBilledForLongTermContractsOrPrograms foot.</label:label>
+
+	        <!-- ARC: (B) to (C)(Formula to Variable) -->
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_Total'
+	                 name='Total'
+	                 />
+
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_ContractCompleteFlag'
+	                 name='ContractCompleteFlag'
+	                 />
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_Each'
+	                 name='Each'
+	                 />
+
+	        <!--  RESOURCE: VARIABLES-Fact -->
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+	        <!--  ARC: (Variables to Filters) -->
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Total'
+	                 xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+	     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Total'
+	                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_ContractCompleteFlag'
+	                 xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Each'
+	                 xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+	                 />
+	     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Each'
+	                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+	                 />
+
+
+	        <!-- RESOURCE: Total variable filters -->
+	        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:AccountsReceivableBilledForLongTermContractsOrPrograms</cf:qname></cf:concept></cf:conceptName>
+	     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+	       <df:dimension>
+	      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+	       </df:dimension>
+	       <df:member>
+	      <df:qname>wip:ContractCompleteMember</df:qname>
+	       </df:member>
+	     </df:explicitDimension>
+	     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+	       <asf:aspect>period</asf:aspect>
+	     </asf:aspectCover>
+    
+	     <!-- RESOURCE: Contract Complete Flag filters -->
+	        <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+	     <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+	       <df:dimension>
+	      <df:qname>wip:ContractNumberAxis</df:qname>
+	       </df:dimension>
+	     </df:typedDimension>
+	     <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+	     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+	       <asf:aspect>unit</asf:aspect>
+	     </asf:aspectCover>
+	     <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+	     <!-- RESOURCE: Member Value filters -->
+	     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+	     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+	      </generic:link>
+
+	  <!-- Member Aggregation - Work in Progress Contract - AccountsReceivableBilledForLongTermContractsOrPrograms -->
+	  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+	          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+	            id='RULE065_MemberAggregation_ContractInProgress_AccountsReceivableBilledForLongTermContractsOrPrograms_Foots'
+	            aspectModel='dimensional'
+	            implicitFiltering='true'
+	            test='$Total eq sum($Each)' />
+
+	     <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+	         xlink:from='ASSERTION_RollUp'
+	         xlink:to='ASSERTION_Label'
+	         order='1.0'/>
+
+	     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+	         xml:lang='en'>Contract Work in Progress AccountsReceivableBilledForLongTermContractsOrPrograms foot.</label:label>
+
+	        <!-- ARC: (B) to (C)(Formula to Variable) -->
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_Total'
+	                 name='Total'
+	                 />
+
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_ContractCompleteFlag'
+	                 name='ContractCompleteFlag'
+	                 />
+	        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+	                 xlink:from='ASSERTION_RollUp' order='1.0'
+	                 xlink:to='VARIABLE_Each'
+	                 name='Each'
+	                 />
+
+	        <!--  RESOURCE: VARIABLES-Fact -->
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+	        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+	        <!--  ARC: (Variables to Filters) -->
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Total'
+	                 xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+	     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Total'
+	                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_ContractCompleteFlag'
+	                 xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+	        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Each'
+	                 xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+	                 />
+	     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+	                 xlink:from='VARIABLE_Each'
+	                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+	                 />
+
+
+	        <!-- RESOURCE: Total variable filters -->
+	        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:AccountsReceivableBilledForLongTermContractsOrPrograms</cf:qname></cf:concept></cf:conceptName>
+	     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+	       <df:dimension>
+	      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+	       </df:dimension>
+	       <df:member>
+	      <df:qname>wip:ContractInProcessMember</df:qname>
+	       </df:member>
+	     </df:explicitDimension>    
+	     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+	       <asf:aspect>period</asf:aspect>
+	     </asf:aspectCover>
+    
+    
+	     <!-- RESOURCE: Contract Complete Flag filters -->
+	        <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+	     <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+	       <df:dimension>
+	      <df:qname>wip:ContractNumberAxis</df:qname>
+	       </df:dimension>
+	     </df:typedDimension>
+	     <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+	     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+	       <asf:aspect>unit</asf:aspect>
+	     </asf:aspectCover>
+	     <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+	     <!-- RESOURCE: Member Value filters -->
+	     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+	     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+	      </generic:link>"
+		  
+		  " <!-- Member Aggregation - Complete Contract - ContractReceivableRetainage -->
+		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+		             id='RULE066_MemberAggregation_ContractComplete_ContractReceivableRetainage_Foots'
+		             aspectModel='dimensional'
+		             implicitFiltering='true'
+		             test='$Total eq sum($Each)' />
+
+		      <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+		          xlink:from='ASSERTION_RollUp'
+		          xlink:to='ASSERTION_Label'
+		          order='1.0'/>
+
+		      <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+		          xml:lang='en'>Contract Complete ContractReceivableRetainage foot.</label:label>
+
+		         <!-- ARC: (B) to (C)(Formula to Variable) -->
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Total'
+		                  name='Total'
+		                  />
+
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_ContractCompleteFlag'
+		                  name='ContractCompleteFlag'
+		                  />
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Each'
+		                  name='Each'
+		                  />
+
+		         <!--  RESOURCE: VARIABLES-Fact -->
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+		         <!--  ARC: (Variables to Filters) -->
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_ContractCompleteFlag'
+		                  xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+		                  />
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+		                  />
+
+
+		         <!-- RESOURCE: Total variable filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:ContractReceivableRetainage</cf:qname></cf:concept></cf:conceptName>
+		      <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+		        <df:dimension>
+		       <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+		        </df:dimension>
+		        <df:member>
+		       <df:qname>wip:ContractCompleteMember</df:qname>
+		        </df:member>
+		      </df:explicitDimension>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+		        <asf:aspect>period</asf:aspect>
+		      </asf:aspectCover>
+    
+		      <!-- RESOURCE: Contract Complete Flag filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+		      <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <df:dimension>
+		       <df:qname>wip:ContractNumberAxis</df:qname>
+		        </df:dimension>
+		      </df:typedDimension>
+		      <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <asf:aspect>unit</asf:aspect>
+		      </asf:aspectCover>
+		      <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+		      <!-- RESOURCE: Member Value filters -->
+		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+		       </generic:link>
+
+		   <!-- Member Aggregation - Work in Progress Contract - ContractReceivableRetainage -->
+		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+		             id='RULE067_MemberAggregation_ContractInProgress_ContractReceivableRetainage_Foots'
+		             aspectModel='dimensional'
+		             implicitFiltering='true'
+		             test='$Total eq sum($Each)' />
+
+		      <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+		          xlink:from='ASSERTION_RollUp'
+		          xlink:to='ASSERTION_Label'
+		          order='1.0'/>
+
+		      <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+		          xml:lang='en'>Contract Work in Progress ContractReceivableRetainage foot.</label:label>
+
+		         <!-- ARC: (B) to (C)(Formula to Variable) -->
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Total'
+		                  name='Total'
+		                  />
+
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_ContractCompleteFlag'
+		                  name='ContractCompleteFlag'
+		                  />
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Each'
+		                  name='Each'
+		                  />
+
+		         <!--  RESOURCE: VARIABLES-Fact -->
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+		         <!--  ARC: (Variables to Filters) -->
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_ContractCompleteFlag'
+		                  xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+		                  />
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+		                  />
+
+
+		         <!-- RESOURCE: Total variable filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:ContractReceivableRetainage</cf:qname></cf:concept></cf:conceptName>
+		      <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+		        <df:dimension>
+		       <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+		        </df:dimension>
+		        <df:member>
+		       <df:qname>wip:ContractInProcessMember</df:qname>
+		        </df:member>
+		      </df:explicitDimension>    
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+		        <asf:aspect>period</asf:aspect>
+		      </asf:aspectCover>
+    
+    
+		      <!-- RESOURCE: Contract Complete Flag filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+		      <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <df:dimension>
+		       <df:qname>wip:ContractNumberAxis</df:qname>
+		        </df:dimension>
+		      </df:typedDimension>
+		      <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <asf:aspect>unit</asf:aspect>
+		      </asf:aspectCover>
+		      <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+		      <!-- RESOURCE: Member Value filters -->
+		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+		       </generic:link>"
+		  " <!-- Member Aggregation - Complete Contract - BilledContractReceivables -->
+		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+		             id='RULE068_MemberAggregation_ContractComplete_BilledContractReceivables_Foots'
+		             aspectModel='dimensional'
+		             implicitFiltering='true'
+		             test='$Total eq sum($Each)' />
+
+		      <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+		          xlink:from='ASSERTION_RollUp'
+		          xlink:to='ASSERTION_Label'
+		          order='1.0'/>
+
+		      <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+		          xml:lang='en'>Contract Complete BilledContractReceivables foot.</label:label>
+
+		         <!-- ARC: (B) to (C)(Formula to Variable) -->
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Total'
+		                  name='Total'
+		                  />
+
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_ContractCompleteFlag'
+		                  name='ContractCompleteFlag'
+		                  />
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Each'
+		                  name='Each'
+		                  />
+
+		         <!--  RESOURCE: VARIABLES-Fact -->
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+		         <!--  ARC: (Variables to Filters) -->
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_ContractCompleteFlag'
+		                  xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+		                  />
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+		                  />
+
+
+		         <!-- RESOURCE: Total variable filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:BilledContractReceivables</cf:qname></cf:concept></cf:conceptName>
+		      <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+		        <df:dimension>
+		       <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+		        </df:dimension>
+		        <df:member>
+		       <df:qname>wip:ContractCompleteMember</df:qname>
+		        </df:member>
+		      </df:explicitDimension>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+		        <asf:aspect>period</asf:aspect>
+		      </asf:aspectCover>
+    
+		      <!-- RESOURCE: Contract Complete Flag filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+		      <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <df:dimension>
+		       <df:qname>wip:ContractNumberAxis</df:qname>
+		        </df:dimension>
+		      </df:typedDimension>
+		      <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <asf:aspect>unit</asf:aspect>
+		      </asf:aspectCover>
+		      <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+		      <!-- RESOURCE: Member Value filters -->
+		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+		       </generic:link>
+
+		   <!-- Member Aggregation - Work in Progress Contract - BilledContractReceivables -->
+		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+		             id='RULE069_MemberAggregation_ContractInProgress_BilledContractReceivables_Foots'
+		             aspectModel='dimensional'
+		             implicitFiltering='true'
+		             test='$Total eq sum($Each)' />
+
+		      <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+		          xlink:from='ASSERTION_RollUp'
+		          xlink:to='ASSERTION_Label'
+		          order='1.0'/>
+
+		      <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+		          xml:lang='en'>Contract Work in Progress BilledContractReceivables foot.</label:label>
+
+		         <!-- ARC: (B) to (C)(Formula to Variable) -->
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Total'
+		                  name='Total'
+		                  />
+
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_ContractCompleteFlag'
+		                  name='ContractCompleteFlag'
+		                  />
+		         <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+		                  xlink:from='ASSERTION_RollUp' order='1.0'
+		                  xlink:to='VARIABLE_Each'
+		                  name='Each'
+		                  />
+
+		         <!--  RESOURCE: VARIABLES-Fact -->
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+		         <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+		         <!--  ARC: (Variables to Filters) -->
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Total'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_ContractCompleteFlag'
+		                  xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+		         <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+		                  />
+		      <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+		                  xlink:from='VARIABLE_Each'
+		                  xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+		                  />
+
+
+		         <!-- RESOURCE: Total variable filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:BilledContractReceivables</cf:qname></cf:concept></cf:conceptName>
+		      <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+		        <df:dimension>
+		       <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+		        </df:dimension>
+		        <df:member>
+		       <df:qname>wip:ContractInProcessMember</df:qname>
+		        </df:member>
+		      </df:explicitDimension>    
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+		        <asf:aspect>period</asf:aspect>
+		      </asf:aspectCover>
+    
+    
+		      <!-- RESOURCE: Contract Complete Flag filters -->
+		         <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+		      <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <df:dimension>
+		       <df:qname>wip:ContractNumberAxis</df:qname>
+		        </df:dimension>
+		      </df:typedDimension>
+		      <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+		      <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+		        <asf:aspect>unit</asf:aspect>
+		      </asf:aspectCover>
+		      <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+		      <!-- RESOURCE: Member Value filters -->
+		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+		       </generic:link>"
+			   
+			   " <!-- Member Aggregation - Complete Contract - ContractGainFade -->
+			    <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+			            <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+			              id='RULE070_MemberAggregation_ContractComplete_ContractGainFade_Foots'
+			              aspectModel='dimensional'
+			              implicitFiltering='true'
+			              test='$Total eq sum($Each)' />
+
+			       <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+			           xlink:from='ASSERTION_RollUp'
+			           xlink:to='ASSERTION_Label'
+			           order='1.0'/>
+
+			       <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+			           xml:lang='en'>Contract Complete ContractGainFade foot.</label:label>
+
+			          <!-- ARC: (B) to (C)(Formula to Variable) -->
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_Total'
+			                   name='Total'
+			                   />
+
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_ContractCompleteFlag'
+			                   name='ContractCompleteFlag'
+			                   />
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_Each'
+			                   name='Each'
+			                   />
+
+			          <!--  RESOURCE: VARIABLES-Fact -->
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+			          <!--  ARC: (Variables to Filters) -->
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Total'
+			                   xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+			       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Total'
+			                   xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_ContractCompleteFlag'
+			                   xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Each'
+			                   xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+			                   />
+			       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Each'
+			                   xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+			                   />
+
+
+			          <!-- RESOURCE: Total variable filters -->
+			          <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractGainFade</cf:qname></cf:concept></cf:conceptName>
+			       <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+			         <df:dimension>
+			        <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+			         </df:dimension>
+			         <df:member>
+			        <df:qname>wip:ContractCompleteMember</df:qname>
+			         </df:member>
+			       </df:explicitDimension>    
+    
+			       <!-- RESOURCE: Contract Complete Flag filters -->
+			          <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+			       <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+			         <df:dimension>
+			        <df:qname>wip:ContractNumberAxis</df:qname>
+			         </df:dimension>
+			       </df:typedDimension>
+			       <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+			       <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+			         <asf:aspect>unit</asf:aspect>
+			       </asf:aspectCover>
+    
+			       <!-- RESOURCE: Member Value filters -->
+			       <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+
+			        </generic:link>
+
+			    <!-- Member Aggregation - Work in Progress Contract - ContractGainFade -->
+			    <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+			            <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+			              id='RULE071_MemberAggregation_ContractInProgress_ContractGainFade_Foots'
+			              aspectModel='dimensional'
+			              implicitFiltering='true'
+			              test='$Total eq sum($Each)' />
+
+			       <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+			           xlink:from='ASSERTION_RollUp'
+			           xlink:to='ASSERTION_Label'
+			           order='1.0'/>
+
+			       <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+			           xml:lang='en'>Contract Work in Progress ContractGainFade foot.</label:label>
+
+			          <!-- ARC: (B) to (C)(Formula to Variable) -->
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_Total'
+			                   name='Total'
+			                   />
+
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_ContractCompleteFlag'
+			                   name='ContractCompleteFlag'
+			                   />
+			          <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+			                   xlink:from='ASSERTION_RollUp' order='1.0'
+			                   xlink:to='VARIABLE_Each'
+			                   name='Each'
+			                   />
+
+			          <!--  RESOURCE: VARIABLES-Fact -->
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+			          <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+			          <!--  ARC: (Variables to Filters) -->
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Total'
+			                   xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+			       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Total'
+			                   xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_ContractCompleteFlag'
+			                   xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+			          <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Each'
+			                   xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+			                   />
+			       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+			                   xlink:from='VARIABLE_Each'
+			                   xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+			                   />
+
+
+			          <!-- RESOURCE: Total variable filters -->
+			          <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractGainFade</cf:qname></cf:concept></cf:conceptName>
+			       <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+			         <df:dimension>
+			        <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+			         </df:dimension>
+			         <df:member>
+			        <df:qname>wip:ContractInProcessMember</df:qname>
+			         </df:member>
+			       </df:explicitDimension>    
+    
+			       <!-- RESOURCE: Contract Complete Flag filters -->
+			          <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+			       <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+			         <df:dimension>
+			        <df:qname>wip:ContractNumberAxis</df:qname>
+			         </df:dimension>
+			       </df:typedDimension>
+			       <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+			       <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+			         <asf:aspect>unit</asf:aspect>
+			       </asf:aspectCover>
+    
+			       <!-- RESOURCE: Member Value filters -->
+			       <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+
+			        </generic:link>"
+					
+					" <!-- Member Aggregation - Complete Contract - ContractPermanentJobBorrow -->
+					 <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+					         <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+					           id='RULE072_MemberAggregation_ContractComplete_ContractPermanentJobBorrow_Foots'
+					           aspectModel='dimensional'
+					           implicitFiltering='true'
+					           test='$Total eq sum($Each)' />
+
+					    <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+					        xlink:from='ASSERTION_RollUp'
+					        xlink:to='ASSERTION_Label'
+					        order='1.0'/>
+
+					    <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+					        xml:lang='en'>Contract Complete ContractPermanentJobBorrow foot.</label:label>
+
+					       <!-- ARC: (B) to (C)(Formula to Variable) -->
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_Total'
+					                name='Total'
+					                />
+
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_ContractCompleteFlag'
+					                name='ContractCompleteFlag'
+					                />
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_Each'
+					                name='Each'
+					                />
+
+					       <!--  RESOURCE: VARIABLES-Fact -->
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+					       <!--  ARC: (Variables to Filters) -->
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Total'
+					                xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+					    <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Total'
+					                xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_ContractCompleteFlag'
+					                xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Each'
+					                xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+					                />
+					    <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Each'
+					                xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+					                />
+
+
+					       <!-- RESOURCE: Total variable filters -->
+					       <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractPermanentJobBorrow</cf:qname></cf:concept></cf:conceptName>
+					    <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+					      <df:dimension>
+					     <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+					      </df:dimension>
+					      <df:member>
+					     <df:qname>wip:ContractCompleteMember</df:qname>
+					      </df:member>
+					    </df:explicitDimension>
+					    <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+					      <asf:aspect>period</asf:aspect>
+					    </asf:aspectCover>
+    
+					    <!-- RESOURCE: Contract Complete Flag filters -->
+					       <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+					    <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+					      <df:dimension>
+					     <df:qname>wip:ContractNumberAxis</df:qname>
+					      </df:dimension>
+					    </df:typedDimension>
+					    <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+					    <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+					      <asf:aspect>unit</asf:aspect>
+					    </asf:aspectCover>
+					    <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+					    <!-- RESOURCE: Member Value filters -->
+					    <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+					    <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+					     </generic:link>
+
+					 <!-- Member Aggregation - Work in Progress Contract - ContractPermanentJobBorrow -->
+					 <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+					         <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+					           id='RULE073_MemberAggregation_ContractInProgress_ContractPermanentJobBorrow_Foots'
+					           aspectModel='dimensional'
+					           implicitFiltering='true'
+					           test='$Total eq sum($Each)' />
+
+					    <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+					        xlink:from='ASSERTION_RollUp'
+					        xlink:to='ASSERTION_Label'
+					        order='1.0'/>
+
+					    <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+					        xml:lang='en'>Contract Work in Progress ContractPermanentJobBorrow foot.</label:label>
+
+					       <!-- ARC: (B) to (C)(Formula to Variable) -->
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_Total'
+					                name='Total'
+					                />
+
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_ContractCompleteFlag'
+					                name='ContractCompleteFlag'
+					                />
+					       <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+					                xlink:from='ASSERTION_RollUp' order='1.0'
+					                xlink:to='VARIABLE_Each'
+					                name='Each'
+					                />
+
+					       <!--  RESOURCE: VARIABLES-Fact -->
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+					       <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+					       <!--  ARC: (Variables to Filters) -->
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Total'
+					                xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+					    <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Total'
+					                xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_ContractCompleteFlag'
+					                xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+					       <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Each'
+					                xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+					                />
+					    <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+					                xlink:from='VARIABLE_Each'
+					                xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+					                />
+
+
+					       <!-- RESOURCE: Total variable filters -->
+					       <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractPermanentJobBorrow</cf:qname></cf:concept></cf:conceptName>
+					    <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+					      <df:dimension>
+					     <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+					      </df:dimension>
+					      <df:member>
+					     <df:qname>wip:ContractInProcessMember</df:qname>
+					      </df:member>
+					    </df:explicitDimension>    
+					    <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+					      <asf:aspect>period</asf:aspect>
+					    </asf:aspectCover>
+    
+    
+					    <!-- RESOURCE: Contract Complete Flag filters -->
+					       <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+					    <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+					      <df:dimension>
+					     <df:qname>wip:ContractNumberAxis</df:qname>
+					      </df:dimension>
+					    </df:typedDimension>
+					    <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+					    <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+					      <asf:aspect>unit</asf:aspect>
+					    </asf:aspectCover>
+					    <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+					    <!-- RESOURCE: Member Value filters -->
+					    <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+					    <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+					     </generic:link>"
+						 
+						 " <!-- Member Aggregation - Complete Contract - ContractAccruedLoss -->
+						  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+						          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+						            id='RULE074_MemberAggregation_ContractComplete_ContractAccruedLoss_Foots'
+						            aspectModel='dimensional'
+						            implicitFiltering='true'
+						            test='$Total eq sum($Each)' />
+
+						     <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						         xlink:from='ASSERTION_RollUp'
+						         xlink:to='ASSERTION_Label'
+						         order='1.0'/>
+
+						     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+						         xml:lang='en'>Contract Complete ContractAccruedLoss foot.</label:label>
+
+						        <!-- ARC: (B) to (C)(Formula to Variable) -->
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_Total'
+						                 name='Total'
+						                 />
+
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_ContractCompleteFlag'
+						                 name='ContractCompleteFlag'
+						                 />
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_Each'
+						                 name='Each'
+						                 />
+
+						        <!--  RESOURCE: VARIABLES-Fact -->
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+						        <!--  ARC: (Variables to Filters) -->
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Total'
+						                 xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+						     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Total'
+						                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_ContractCompleteFlag'
+						                 xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Each'
+						                 xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+						                 />
+						     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Each'
+						                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+						                 />
+
+
+						        <!-- RESOURCE: Total variable filters -->
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractAccruedLoss</cf:qname></cf:concept></cf:conceptName>
+						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+						       <df:dimension>
+						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+						       </df:dimension>
+						       <df:member>
+						      <df:qname>wip:ContractCompleteMember</df:qname>
+						       </df:member>
+						     </df:explicitDimension>
+						     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+						       <asf:aspect>period</asf:aspect>
+						     </asf:aspectCover>
+    
+						     <!-- RESOURCE: Contract Complete Flag filters -->
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+						     <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+						       <df:dimension>
+						      <df:qname>wip:ContractNumberAxis</df:qname>
+						       </df:dimension>
+						     </df:typedDimension>
+						     <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq true()'/>
+						     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+						       <asf:aspect>unit</asf:aspect>
+						     </asf:aspectCover>
+						     <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+						     <!-- RESOURCE: Member Value filters -->
+						     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+						     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+						      </generic:link>
+
+						  <!-- Member Aggregation - Work in Progress Contract - ContractAccruedLoss -->
+						  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+						          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
+						            id='RULE075_MemberAggregation_ContractInProgress_ContractAccruedLoss_Foots'
+						            aspectModel='dimensional'
+						            implicitFiltering='true'
+						            test='$Total eq sum($Each)' />
+
+						     <generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						         xlink:from='ASSERTION_RollUp'
+						         xlink:to='ASSERTION_Label'
+						         order='1.0'/>
+
+						     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
+						         xml:lang='en'>Contract Work in Progress ContractAccruedLoss foot.</label:label>
+
+						        <!-- ARC: (B) to (C)(Formula to Variable) -->
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_Total'
+						                 name='Total'
+						                 />
+
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_ContractCompleteFlag'
+						                 name='ContractCompleteFlag'
+						                 />
+						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						                 xlink:from='ASSERTION_RollUp' order='1.0'
+						                 xlink:to='VARIABLE_Each'
+						                 name='Each'
+						                 />
+
+						        <!--  RESOURCE: VARIABLES-Fact -->
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Total' bindAsSequence='false' />
+
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_ContractCompleteFlag' bindAsSequence='true' />
+    
+						        <variable:factVariable xlink:type='resource' xlink:label='VARIABLE_Each' bindAsSequence='true' />
+
+						        <!--  ARC: (Variables to Filters) -->
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Total'
+						                 xlink:to='FILTER_Total' order='1.0' complement='false' cover='true' />
+
+						     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Total'
+						                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true' />
+       
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_ContractCompleteFlag'
+						                 xlink:to='FILTER_ContractCompleteFlag' order='1.0' complement='false' cover='true' />
+       
+						        <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Each'
+						                 xlink:to='FILTER_Each' order='1.0' complement='false' cover='true'
+						                 />
+						     <variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						                 xlink:from='VARIABLE_Each'
+						                 xlink:to='FILTER_Name' order='1.0' complement='false' cover='true'
+						                 />
+
+
+						        <!-- RESOURCE: Total variable filters -->
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractAccruedLoss</cf:qname></cf:concept></cf:conceptName>
+						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
+						       <df:dimension>
+						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
+						       </df:dimension>
+						       <df:member>
+						      <df:qname>wip:ContractInProcessMember</df:qname>
+						       </df:member>
+						     </df:explicitDimension>    
+						     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_Total'>
+						       <asf:aspect>period</asf:aspect>
+						     </asf:aspectCover>
+    
+    
+						     <!-- RESOURCE: Contract Complete Flag filters -->
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'><cf:concept><cf:qname>wip:ContractCompleteFlag</cf:qname></cf:concept></cf:conceptName>
+						     <df:typedDimension xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+						       <df:dimension>
+						      <df:qname>wip:ContractNumberAxis</df:qname>
+						       </df:dimension>
+						     </df:typedDimension>
+						     <gf:general xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='. eq false()'/>
+						     <asf:aspectCover xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag'>
+						       <asf:aspect>unit</asf:aspect>
+						     </asf:aspectCover>
+						     <pf:period xlink:type='resource' xlink:label='FILTER_ContractCompleteFlag' test='xfi:period-end(.) = xfi:period-instant(xfi:period($Total))'/>
+    
+						     <!-- RESOURCE: Member Value filters -->
+						     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
+						     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
+						      </generic:link>"
+							  
+						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
+						  						 id='RULE080_GreaterThanOrEqualToZero_AccountsReceivableBilledForLongTermContractsOrPrograms'
+						  						 aspectModel='dimensional'
+						  						 implicitFiltering='true'
+						  						 test="$FactValue ge 0" />
+
+						  				 <!--  ARC: Assertion to Label -->
+						  		<generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						  				xlink:from='ASSERTION'
+						  				xlink:to='ASSERTION_Label'
+						  				order='1.0'/>
+
+						  				 <!--  LABEL -->
+						  				 <label:label xlink:type='resource' xlink:label='ASSERTION_Label'
+						  						xlink:role='http://www.xbrl.org/2008/role/label'
+						  						xml:lang='en'>Accounts receivable billed for long-term contracts or programs MUST never be negative.</label:label>
+
+
+						  			<!--  ARC: From the assertions to the variables it depends on -->
+						  			<variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						  							 xlink:from='ASSERTION'
+						  							 xlink:to='VARIABLE_FactValue'
+						  							 order='1.0'
+						  							 name='FactValue'
+						  							 />
+
+						  				<!--  Fact variable Value Assertion  -->
+
+						  			<variable:factVariable xlink:type='resource'
+						  				xlink:label='VARIABLE_FactValue'
+						  				bindAsSequence='false' fallbackValue='0' />
+
+						  			<!--  ARC: Fact variable to filter -->
+
+						  			<variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						  							 xlink:from='VARIABLE_FactValue'
+						  							 xlink:to='FILTER_FactValue'
+						  							 order='1.0'
+						  							 complement='false'
+						  							 cover='true'  />
+
+						  			<!--  Concept filters: -->
+						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
+						  				<cf:concept>
+						  					<cf:qname>us-gaap:AccountsReceivableBilledForLongTermContractsOrPrograms</cf:qname>
+						  				</cf:concept>
+						  			</cf:conceptName>
+						  	</generic:link>
+							
+						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
+						  						 id='RULE081_GreaterThanOrEqualToZero_ContractReceivableRetainage'
+						  						 aspectModel='dimensional'
+						  						 implicitFiltering='true'
+						  						 test="$FactValue ge 0" />
+
+						  				 <!--  ARC: Assertion to Label -->
+						  		<generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						  				xlink:from='ASSERTION'
+						  				xlink:to='ASSERTION_Label'
+						  				order='1.0'/>
+
+						  				 <!--  LABEL -->
+						  				 <label:label xlink:type='resource' xlink:label='ASSERTION_Label'
+						  						xlink:role='http://www.xbrl.org/2008/role/label'
+						  						xml:lang='en'>Accounts receivable from retainage MUST never be negative.</label:label>
+
+
+						  			<!--  ARC: From the assertions to the variables it depends on -->
+						  			<variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						  							 xlink:from='ASSERTION'
+						  							 xlink:to='VARIABLE_FactValue'
+						  							 order='1.0'
+						  							 name='FactValue'
+						  							 />
+
+						  				<!--  Fact variable Value Assertion  -->
+
+						  			<variable:factVariable xlink:type='resource'
+						  				xlink:label='VARIABLE_FactValue'
+						  				bindAsSequence='false' fallbackValue='0' />
+
+						  			<!--  ARC: Fact variable to filter -->
+
+						  			<variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						  							 xlink:from='VARIABLE_FactValue'
+						  							 xlink:to='FILTER_FactValue'
+						  							 order='1.0'
+						  							 complement='false'
+						  							 cover='true'  />
+
+						  			<!--  Concept filters: -->
+						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
+						  				<cf:concept>
+						  					<cf:qname>us-gaap:ContractReceivableRetainage</cf:qname>
+						  				</cf:concept>
+						  			</cf:conceptName>
+						  	</generic:link>
+							
+						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
+						  						 id='RULE082_GreaterThanOrEqualToZero_BilledContractReceivables'
+						  						 aspectModel='dimensional'
+						  						 implicitFiltering='true'
+						  						 test="$FactValue ge 0" />
+
+						  				 <!--  ARC: Assertion to Label -->
+						  		<generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						  				xlink:from='ASSERTION'
+						  				xlink:to='ASSERTION_Label'
+						  				order='1.0'/>
+
+						  				 <!--  LABEL -->
+						  				 <label:label xlink:type='resource' xlink:label='ASSERTION_Label'
+						  						xlink:role='http://www.xbrl.org/2008/role/label'
+						  						xml:lang='en'>Accounts receivable from non-retainage and retainage MUST never be negative.</label:label>
+
+
+						  			<!--  ARC: From the assertions to the variables it depends on -->
+						  			<variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						  							 xlink:from='ASSERTION'
+						  							 xlink:to='VARIABLE_FactValue'
+						  							 order='1.0'
+						  							 name='FactValue'
+						  							 />
+
+						  				<!--  Fact variable Value Assertion  -->
+
+						  			<variable:factVariable xlink:type='resource'
+						  				xlink:label='VARIABLE_FactValue'
+						  				bindAsSequence='false' fallbackValue='0' />
+
+						  			<!--  ARC: Fact variable to filter -->
+
+						  			<variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						  							 xlink:from='VARIABLE_FactValue'
+						  							 xlink:to='FILTER_FactValue'
+						  							 order='1.0'
+						  							 complement='false'
+						  							 cover='true'  />
+
+						  			<!--  Concept filters: -->
+						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
+						  				<cf:concept>
+						  					<cf:qname>us-gaap:BilledContractReceivables</cf:qname>
+						  				</cf:concept>
+						  			</cf:conceptName>
+						  	</generic:link>
+							
+						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
+						  						 id='RULE083_GreaterThanOrEqualToZero_ContractPermanentJobBorrow'
+						  						 aspectModel='dimensional'
+						  						 implicitFiltering='true'
+						  						 test="$FactValue ge 0" />
+
+						  				 <!--  ARC: Assertion to Label -->
+						  		<generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						  				xlink:from='ASSERTION'
+						  				xlink:to='ASSERTION_Label'
+						  				order='1.0'/>
+
+						  				 <!--  LABEL -->
+						  				 <label:label xlink:type='resource' xlink:label='ASSERTION_Label'
+						  						xlink:role='http://www.xbrl.org/2008/role/label'
+						  						xml:lang='en'>Permanent job borrowings MUST never be negative.</label:label>
+
+
+						  			<!--  ARC: From the assertions to the variables it depends on -->
+						  			<variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						  							 xlink:from='ASSERTION'
+						  							 xlink:to='VARIABLE_FactValue'
+						  							 order='1.0'
+						  							 name='FactValue'
+						  							 />
+
+						  				<!--  Fact variable Value Assertion  -->
+
+						  			<variable:factVariable xlink:type='resource'
+						  				xlink:label='VARIABLE_FactValue'
+						  				bindAsSequence='false' fallbackValue='0' />
+
+						  			<!--  ARC: Fact variable to filter -->
+
+						  			<variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						  							 xlink:from='VARIABLE_FactValue'
+						  							 xlink:to='FILTER_FactValue'
+						  							 order='1.0'
+						  							 complement='false'
+						  							 cover='true'  />
+
+						  			<!--  Concept filters: -->
+						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
+						  				<cf:concept>
+						  					<cf:qname>wip:ContractPermanentJobBorrow</cf:qname>
+						  				</cf:concept>
+						  			</cf:conceptName>
+						  	</generic:link>
+							
+						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
+
+						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
+						  						 id='RULE084_GreaterThanOrEqualToZero_ContractAccruedLoss'
+						  						 aspectModel='dimensional'
+						  						 implicitFiltering='true'
+						  						 test="$FactValue ge 0" />
+
+						  				 <!--  ARC: Assertion to Label -->
+						  		<generic:arc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/element-label'
+						  				xlink:from='ASSERTION'
+						  				xlink:to='ASSERTION_Label'
+						  				order='1.0'/>
+
+						  				 <!--  LABEL -->
+						  				 <label:label xlink:type='resource' xlink:label='ASSERTION_Label'
+						  						xlink:role='http://www.xbrl.org/2008/role/label'
+						  						xml:lang='en'>Contract accrued loss MUST never be negative.</label:label>
+
+
+						  			<!--  ARC: From the assertions to the variables it depends on -->
+						  			<variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
+						  							 xlink:from='ASSERTION'
+						  							 xlink:to='VARIABLE_FactValue'
+						  							 order='1.0'
+						  							 name='FactValue'
+						  							 />
+
+						  				<!--  Fact variable Value Assertion  -->
+
+						  			<variable:factVariable xlink:type='resource'
+						  				xlink:label='VARIABLE_FactValue'
+						  				bindAsSequence='false' fallbackValue='0' />
+
+						  			<!--  ARC: Fact variable to filter -->
+
+						  			<variable:variableFilterArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-filter'
+						  							 xlink:from='VARIABLE_FactValue'
+						  							 xlink:to='FILTER_FactValue'
+						  							 order='1.0'
+						  							 complement='false'
+						  							 cover='true'  />
+
+						  			<!--  Concept filters: -->
+						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
+						  				<cf:concept>
+						  					<cf:qname>wip:ContractAccruedLoss</cf:qname>
+						  				</cf:concept>
+						  			</cf:conceptName>
+						  	</generic:link>
 
 </link:linkbase>
