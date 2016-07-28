@@ -177,10 +177,6 @@
       <link:label id="id_14f3ccc" xlink:label="lbl_ContractLocationState_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Location, State</link:label>
       <link:label id="id_419468" xlink:label="lbl_ContractRevenueRevenueToComplete_labels" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Backlog</link:label>
       <link:label id="id_1e84104" xlink:label="lbl_label31998212" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Performance [Abstract]</link:label>
-      <link:label id="id_132c31e" xlink:label="lbl_ContractAccruedLoss_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Accrued Loss</link:label>
-      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractAccruedLoss" xlink:label="lbl_ContractAccruedLoss" xlink:type="locator"/>
-      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractAccruedLoss" xlink:to="lbl_ContractAccruedLoss_labels" xlink:type="arc"/>
-      <link:label id="id_16a13e7" xlink:label="lbl_ContractAccruedLoss_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Accrual for the expected loss on a contract.</link:label>
       <link:label id="id_11dac1f" xlink:label="lbl_ContractGainFade_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Gain (Fade)</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractGainFade" xlink:label="lbl_ContractGainFade" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractGainFade" xlink:to="lbl_ContractGainFade_labels" xlink:type="arc"/>

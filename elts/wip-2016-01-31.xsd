@@ -50,7 +50,6 @@
    <xsd:element abstract="false" id="wip_ContractCustomerName" name="ContractCustomerName" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
    <xsd:element abstract="false" id="wip_ContractLocationCity" name="ContractLocationCity" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
    <xsd:element abstract="false" id="wip_ContractLocationState" name="ContractLocationState" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
-   <xsd:element abstract="false" id="wip_ContractAccruedLoss" name="ContractAccruedLoss" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
    <xsd:element abstract="false" id="wip_ContractGainFade" name="ContractGainFade" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration"/>
    <xsd:element abstract="true" id="wip_ContractPerformanceAbstract" name="ContractPerformanceAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
    <xsd:element abstract="true" id="wip_ContractBillingsAbstract" name="ContractBillingsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>

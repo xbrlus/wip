@@ -6169,10 +6169,10 @@
 					    <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
 					     </generic:link>"
 						 
-						 " <!-- Member Aggregation - Complete Contract - ContractAccruedLoss -->
+						 " <!-- Member Aggregation - Complete Contract - ProvisionForLossOnContracts -->
 						  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 						          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
-						            id='RULE074_MemberAggregation_ContractComplete_ContractAccruedLoss_Foots'
+						            id='RULE074_MemberAggregation_ContractComplete_ProvisionForLossOnContracts_Foots'
 						            aspectModel='dimensional'
 						            implicitFiltering='true'
 						            test='$Total eq sum($Each)' />
@@ -6183,7 +6183,7 @@
 						         order='1.0'/>
 
 						     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
-						         xml:lang='en'>Contract Complete ContractAccruedLoss foot.</label:label>
+						         xml:lang='en'>Contract Complete ProvisionForLossOnContracts foot.</label:label>
 
 						        <!-- ARC: (B) to (C)(Formula to Variable) -->
 						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
@@ -6234,7 +6234,7 @@
 
 
 						        <!-- RESOURCE: Total variable filters -->
-						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractAccruedLoss</cf:qname></cf:concept></cf:conceptName>
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
 						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
 						       <df:dimension>
 						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
@@ -6265,10 +6265,10 @@
 						     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
 						      </generic:link>
 
-						  <!-- Member Aggregation - Work in Progress Contract - ContractAccruedLoss -->
+						  <!-- Member Aggregation - Work in Progress Contract - ProvisionForLossOnContracts -->
 						  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 						          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
-						            id='RULE075_MemberAggregation_ContractInProgress_ContractAccruedLoss_Foots'
+						            id='RULE075_MemberAggregation_ContractInProgress_ProvisionForLossOnContracts_Foots'
 						            aspectModel='dimensional'
 						            implicitFiltering='true'
 						            test='$Total eq sum($Each)' />
@@ -6279,7 +6279,7 @@
 						         order='1.0'/>
 
 						     <label:label xlink:type='resource' xlink:label='ASSERTION_Label' xlink:role='http://www.xbrl.org/2008/role/label'
-						         xml:lang='en'>Contract Work in Progress ContractAccruedLoss foot.</label:label>
+						         xml:lang='en'>Contract Work in Progress ProvisionForLossOnContracts foot.</label:label>
 
 						        <!-- ARC: (B) to (C)(Formula to Variable) -->
 						        <variable:variableArc xlink:type='arc' xlink:arcrole='http://xbrl.org/arcrole/2008/variable-set'
@@ -6330,7 +6330,7 @@
 
 
 						        <!-- RESOURCE: Total variable filters -->
-						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ContractAccruedLoss</cf:qname></cf:concept></cf:conceptName>
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
 						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
 						       <df:dimension>
 						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
@@ -6569,7 +6569,7 @@
 						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 
 						  				 <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION'
-						  						 id='RULE084_GreaterThanOrEqualToZero_ContractAccruedLoss'
+						  						 id='RULE084_GreaterThanOrEqualToZero_ProvisionForLossOnContracts'
 						  						 aspectModel='dimensional'
 						  						 implicitFiltering='true'
 						  						 test="$FactValue ge 0" />
@@ -6612,7 +6612,7 @@
 						  			<!--  Concept filters: -->
 						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
 						  				<cf:concept>
-						  					<cf:qname>wip:ContractAccruedLoss</cf:qname>
+						  					<cf:qname>wip:ProvisionForLossOnContracts</cf:qname>
 						  				</cf:concept>
 						  			</cf:conceptName>
 						  	</generic:link>

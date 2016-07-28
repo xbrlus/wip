@@ -81,11 +81,9 @@
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractLocationState" xlink:label="lbl_ContractLocationState" xlink:type="locator"/>
       <link:presentationArc order="4.4" preferredLabel="http://www.xbrl.org/2003/role/terseLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractReceivablesAbstract" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractGainFade" xlink:label="lbl_ContractGainFade" xlink:type="locator"/>
-      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractAccruedLoss" xlink:label="lbl_ContractAccruedLoss" xlink:type="locator"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractPerformanceAbstract" xlink:label="lbl_ContractPerformanceAbstract" xlink:type="locator"/>
       <link:presentationArc order="4.7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractPerformanceAbstract" xlink:type="arc"/>
       <link:presentationArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractGainFade" xlink:type="arc"/>
-      <link:presentationArc order="2.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractAccruedLoss" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractBillingsAbstract" xlink:label="lbl_ContractBillingsAbstract" xlink:type="locator"/>
       <link:presentationArc order="4.2" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractBillingsAbstract" xlink:type="arc"/>
       <link:presentationArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBillingsAbstract" xlink:to="lbl_BillingsInExcessOfCostAndEarnings" xlink:type="arc"/>
@@ -117,5 +115,7 @@
       <link:presentationArc order="2.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPercentCompleteInformationAbstract" xlink:to="lbl_PercentCompleteBasis" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
       <link:presentationArc order="3.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractPermanentJobBorrow" xlink:type="arc"/>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ProvisionForLossOnContracts" xlink:label="lbl_ProvisionForLossOnContracts" xlink:type="locator"/>
+      <link:presentationArc order="0.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
    </link:presentationLink>
 </link:linkbase>
