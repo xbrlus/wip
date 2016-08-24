@@ -19,7 +19,7 @@
       <link:label id="id_39493b" xlink:label="lbl_ContractName_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Name</link:label>
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractName" xlink:label="lbl_ContractName" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractName" xlink:to="lbl_ContractName_labels" xlink:type="arc"/>
-      <link:label id="id_91e31a" xlink:label="lbl_label26617937" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of costs incurred to date for the specified contract.</link:label>
+      <link:label id="id_91e31a" xlink:label="lbl_label26617937" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of costs incurred to date for the specified contract. The contract costs include any accrued loss.</link:label>
       <link:label id="id_147b560" xlink:label="lbl_label16102948" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of estimated cost remaining for the specified contract.</link:label>
       <link:label id="id_43897a" xlink:label="lbl_label17269457" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount expected to be recognized in earnings for the specified contract over its life.</link:label>
       <link:label id="id_1de2225" xlink:label="lbl_label31334949" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Details for Period [Abstract]</link:label>
@@ -195,6 +195,17 @@
       <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractPermanentJobBorrow" xlink:to="lbl_ContractPermanentJobBorrow_labels" xlink:type="arc"/>
       <link:label id="id_986b5f" xlink:label="lbl_ContractPermanentJobBorrow_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">The amount that Billings in Excess of Costs and Estimated Earnings exceeds the estimated Gross Profit on the contract.</link:label>
+      <link:label id="id_1993aa9" xlink:label="lbl_label26819241" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of costs incurred to date for the specified contract excluding the accrued loss. This value is used to calculate the percentage complete.</link:label>
+      <link:label id="id_2db627" xlink:label="lbl_label2995751" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Costs, Incurred to Date, Excluding Accrued Loss</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:to="lbl_label2995751" xlink:type="arc"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:to="lbl_label26819241" xlink:type="arc"/>
+      <link:label id="id_8d8e49" xlink:label="lbl_label9277001" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Accrued Loss on Contracts in Process</link:label>
+      <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ProvisionForLossOnContracts" xlink:label="lbl_ProvisionForLossOnContracts" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ProvisionForLossOnContracts" xlink:to="lbl_label9277001" xlink:type="arc"/>
+      <link:label id="id_1d89cd" xlink:label="lbl_label1935821" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Costs, From Inception To Date [Abstract]</link:label>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCostsFromInceptionToDateAbstract" xlink:label="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_label1935821" xlink:type="arc"/>
    </link:labelLink>
    <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:label id="id_1381bfd" xlink:label="lbl_label20454397" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Contract Receivables [Abstract]</link:label>

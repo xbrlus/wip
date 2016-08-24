@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!--(c) XBRL US, Inc. 2016;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
-
 <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:codification-part="http://fasb.org/codification-part/2016-01-31" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/codification-part/2016-01-31 http://xbrl.fasb.org/us-gaap/2016/elts/us-parts-codification-2016-01-31.xsd">
    <link:referenceLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:reference id="id_1ea6208" xlink:label="lbl_BillingsInExcessOfCostAndEarnings_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
@@ -444,6 +443,73 @@
          <codification-part:SubTopic>35</codification-part:SubTopic>
          <codification-part:Topic>605</codification-part:Topic>
          <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-52</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_99275c" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>34</ref:Paragraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-34</codification-part:URI>
+      </link:reference>
+      <link:loc xlink:href="wip-2016-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
+      <link:referenceArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:to="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:type="arc"/>
+      <link:reference id="id_99aead" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>35</ref:Paragraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-35</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_1d092b" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>36</ref:Paragraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-36</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_46ee5d" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>37</ref:Paragraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-37</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_fd5bd7" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>38</ref:Paragraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-38</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_2668ad" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>83</ref:Paragraph>
+         <ref:Subparagraph>(b)</ref:Subparagraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-83</codification-part:URI>
+      </link:reference>
+      <link:reference id="id_486afc" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss_references" xlink:role="http://www.xbrl.org/2003/role/presentationRef" xlink:type="resource">
+         <ref:Publisher>FASB</ref:Publisher>
+         <ref:Name>Accounting Standards Codification</ref:Name>
+         <ref:Section>25</ref:Section>
+         <ref:Paragraph>84</ref:Paragraph>
+         <ref:Subparagraph>(b)</ref:Subparagraph>
+         <codification-part:SubTopic>35</codification-part:SubTopic>
+         <codification-part:Topic>605</codification-part:Topic>
+         <codification-part:URI>https://asc.fasb.org/viewpage?ovcmd=goto&amp;codification_text=605-35-25-84</codification-part:URI>
       </link:reference>
    </link:referenceLink>
 </link:linkbase>

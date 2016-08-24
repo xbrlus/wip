@@ -105,8 +105,13 @@
       <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractGainFade" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
       <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractPermanentJobBorrow" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsFromInceptionToDateAbstract" xlink:label="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="locator"/>
+      <link:definitionArc order="5.3" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="arc"/>
+      <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
+      <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="arc"/>
       <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ProvisionForLossOnContracts" xlink:label="lbl_ProvisionForLossOnContracts" xlink:type="locator"/>
-      <link:definitionArc order="0.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
+      <link:definitionArc order="2.5" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
    </link:definitionLink>
    <link:definitionLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractDomain" xlink:label="lbl_ContractDomain" xlink:type="locator"/>
@@ -187,7 +192,12 @@
       <link:definitionArc order="1.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractGainFade" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
       <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractPermanentJobBorrow" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsFromInceptionToDateAbstract" xlink:label="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="locator"/>
+      <link:definitionArc order="2.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
+      <link:definitionArc order="3.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="arc"/>
+      <link:definitionArc order="3.3" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="arc"/>
       <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ProvisionForLossOnContracts" xlink:label="lbl_ProvisionForLossOnContracts" xlink:type="locator"/>
-      <link:definitionArc order="0.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
+      <link:definitionArc order="2.5" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
    </link:definitionLink>
 </link:linkbase>

@@ -115,7 +115,12 @@
       <link:presentationArc order="2.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPercentCompleteInformationAbstract" xlink:to="lbl_PercentCompleteBasis" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractPermanentJobBorrow" xlink:label="lbl_ContractPermanentJobBorrow" xlink:type="locator"/>
       <link:presentationArc order="3.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ContractPermanentJobBorrow" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsFromInceptionToDateAbstract" xlink:label="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="locator"/>
+      <link:presentationArc order="4.175" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_ContractCostsFromInceptionToDateAbstract" xlink:type="arc"/>
       <link:loc xlink:href="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-2016-01-31.xsd#us-gaap_ProvisionForLossOnContracts" xlink:label="lbl_ProvisionForLossOnContracts" xlink:type="locator"/>
-      <link:presentationArc order="0.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractPerformanceAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
+      <link:presentationArc order="2.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ProvisionForLossOnContracts" xlink:type="arc"/>
+      <link:loc xlink:href="../elts/wip-2016-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
+      <link:presentationArc order="4.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="arc"/>
+      <link:presentationArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
    </link:presentationLink>
 </link:linkbase>
