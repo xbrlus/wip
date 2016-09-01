@@ -1150,10 +1150,10 @@
   <us-gaap:ContractReceivableRetainage decimals="0" contextRef="Context_2014_12_31_InProcess" unitRef="usd">3000</us-gaap:ContractReceivableRetainage>
   <us-gaap:BilledContractReceivables decimals="0" contextRef="Context_2014_12_31_InProcess" unitRef="usd">33000</us-gaap:BilledContractReceivables>
   <wip:ContractGainFade decimals="0" contextRef="contract_2014-01-01_TO_2014-12-31_1" unitRef="usd">500</wip:ContractGainFade>
-  <wip:ContractAccruedLoss decimals="0" contextRef="contract_2014-12-31_1" unitRef="usd">600</wip:ContractAccruedLoss>
-  <wip:ContractAccruedLoss decimals="0" contextRef="contract_2014-12-31_4" unitRef="usd">100</wip:ContractAccruedLoss>
+  <us-gaap:ProvisionForLossOnContracts decimals="0" contextRef="contract_2014-12-31_1" unitRef="usd">600</us-gaap:ProvisionForLossOnContracts>
+  <us-gaap:ProvisionForLossOnContracts decimals="0" contextRef="contract_2014-12-31_4" unitRef="usd">100</us-gaap:ProvisionForLossOnContracts>
   <wip:ContractGainFade decimals="0" contextRef="contract_2014-01-01_TO_2014-12-31_4" unitRef="usd">200</wip:ContractGainFade>
   <wip:ContractGainFade decimals="0" contextRef="Context_2014-01-01_TO_2014-12-31_InProcess" unitRef="usd">700</wip:ContractGainFade>
-  <wip:ContractAccruedLoss decimals="0" contextRef="Context_2014_12_31_InProcess" unitRef="usd">700</wip:ContractAccruedLoss>
+  <us-gaap:ProvisionForLossOnContracts decimals="0" contextRef="Context_2014_12_31_InProcess" unitRef="usd">700</us-gaap:ProvisionForLossOnContracts>
   <wip:ContractPermanentJobBorrow decimals="0" contextRef="Context_2014_12_31_InProcess" unitRef="usd">2500</wip:ContractPermanentJobBorrow>
 </xbrli:xbrl>

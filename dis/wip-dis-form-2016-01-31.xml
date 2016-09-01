@@ -498,13 +498,9 @@
 		</cf:conceptName>
 	</gen:link>
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-		<va:valueAssertion id="RULE018_GreaterThanOrEqualToZero_Revenues" test="$FactValue ge 0" aspectModel="dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="ASSERTION"/>
 		<!--  ARC: Assertion to Label -->
-		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="ASSERTION" xlink:to="ASSERTION_Label"/>
 		<!--  LABEL -->
-		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">Revenues must never be negative.</label:label>
 		<!--  ARC: From the assertions to the variables it depends on -->
-		<variable:variableArc name="FactValue" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION" xlink:to="VARIABLE_FactValue"/>
 		<!--  Fact variable Value Assertion  -->
 		<variable:factVariable fallbackValue="0" bindAsSequence="false" xlink:type="resource" xlink:label="VARIABLE_FactValue"/>
 		<!--  ARC: Fact variable to filter -->
