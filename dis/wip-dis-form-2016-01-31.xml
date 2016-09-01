@@ -5598,8 +5598,8 @@
 		      <!-- RESOURCE: Member Value filters -->
 		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
-		       </generic:link>"
-		  " <!-- Member Aggregation - Complete Contract - BilledContractReceivables -->
+		       </generic:link>
+		   <!-- Member Aggregation - Complete Contract - BilledContractReceivables -->
 		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
 		             id='RULE068_MemberAggregation_ContractComplete_BilledContractReceivables_Foots'
@@ -5790,9 +5790,9 @@
 		      <!-- RESOURCE: Member Value filters -->
 		      <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 		      <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
-		       </generic:link>"
+		       </generic:link>
 
-			   " <!-- Member Aggregation - Complete Contract - ContractGainFade -->
+			    <!-- Member Aggregation - Complete Contract - ContractGainFade -->
 			    <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 			            <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
 			              id='RULE070_MemberAggregation_ContractComplete_ContractGainFade_Foots'
@@ -5974,9 +5974,9 @@
 			       <!-- RESOURCE: Member Value filters -->
 			       <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 
-			        </generic:link>"
+			        </generic:link>
 
-					" <!-- Member Aggregation - Complete Contract - ContractPermanentJobBorrow -->
+					 <!-- Member Aggregation - Complete Contract - ContractPermanentJobBorrow -->
 					 <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 					         <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
 					           id='RULE072_MemberAggregation_ContractComplete_ContractPermanentJobBorrow_Foots'
@@ -6167,9 +6167,9 @@
 					    <!-- RESOURCE: Member Value filters -->
 					    <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 					    <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
-					     </generic:link>"
+					     </generic:link>
 
-						 " <!-- Member Aggregation - Complete Contract - ProvisionForLossOnContracts -->
+						  <!-- Member Aggregation - Complete Contract - ProvisionForLossOnContracts -->
 						  <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 						          <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
 						            id='RULE074_MemberAggregation_ContractComplete_ProvisionForLossOnContracts_Foots'
@@ -6360,7 +6360,7 @@
 						     <!-- RESOURCE: Member Value filters -->
 						     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 						     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
-						      </generic:link>"
+						      </generic:link>
 
 						  	<generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 
