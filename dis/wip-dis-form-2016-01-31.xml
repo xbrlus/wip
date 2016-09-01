@@ -3190,7 +3190,7 @@
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
 		<va:valueAssertion id="RULE086_MemberAggregation_ContractInProgress_ContractCostsIncurredToDateExcludingAccruedLoss_Foots" test="$Total eq sum($Each)" aspectModel="dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="ASSERTION_RollUp"/>
 		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="ASSERTION_RollUp" xlink:to="ASSERTION_Label"/>
-		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">Contract Work in Progress ProvisionForLossOnContracts foot.</label:label>
+		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">Contract Work in Progress ContractCostsIncurredToDateExcludingAccruedLoss foot.</label:label>
 		<!-- ARC: (B) to (C)(Formula to Variable) -->
 		<variable:variableArc name="Total" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION_RollUp" xlink:to="VARIABLE_Total"/>
 		<variable:variableArc name="ContractCompleteFlag" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION_RollUp" xlink:to="VARIABLE_ContractCompleteFlag"/>
