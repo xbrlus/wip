@@ -6234,7 +6234,7 @@
 
 
 						        <!-- RESOURCE: Total variable filters -->
-						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
 						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
 						       <df:dimension>
 						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
@@ -6330,7 +6330,7 @@
 
 
 						        <!-- RESOURCE: Total variable filters -->
-						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>wip:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
+						        <cf:conceptName xlink:type='resource' xlink:label='FILTER_Name'><cf:concept><cf:qname>us-gaap:ProvisionForLossOnContracts</cf:qname></cf:concept></cf:conceptName>
 						     <df:explicitDimension xlink:type='resource' xlink:label='FILTER_Total'>
 						       <df:dimension>
 						      <df:qname>wip:ContractCompleteOrIncompleteAxis</df:qname>
@@ -6612,7 +6612,7 @@
 						  			<!--  Concept filters: -->
 						  			<cf:conceptName xlink:type='resource' xlink:label='FILTER_FactValue'>
 						  				<cf:concept>
-						  					<cf:qname>wip:ProvisionForLossOnContracts</cf:qname>
+						  					<cf:qname>us-gaap:ProvisionForLossOnContracts</cf:qname>
 						  				</cf:concept>
 						  			</cf:conceptName>
 						  	</generic:link>
