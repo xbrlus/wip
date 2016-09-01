@@ -5405,7 +5405,7 @@
 	     <!-- RESOURCE: Member Value filters -->
 	     <mf:matchDimension xlink:type='resource' xlink:label='FILTER_Each' variable='ContractCompleteFlag' dimension='wip:ContractNumberAxis' matchAny='true'/>
 	     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
-	      </generic:link>"
+	      </generic:link>
 
 		   <!-- Member Aggregation - Complete Contract - ContractReceivableRetainage -->
 		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
