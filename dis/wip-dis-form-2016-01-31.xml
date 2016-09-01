@@ -5407,7 +5407,7 @@
 	     <mf:matchPeriod  xlink:type='resource' xlink:label='FILTER_Each' variable='Total'/>
 	      </generic:link>"
 
-		  " <!-- Member Aggregation - Complete Contract - ContractReceivableRetainage -->
+		   <!-- Member Aggregation - Complete Contract - ContractReceivableRetainage -->
 		   <generic:link xlink:type='extended' xlink:role='http://www.xbrl.org/2003/role/link'>
 		           <va:valueAssertion xlink:type='resource' xlink:label='ASSERTION_RollUp'
 		             id='RULE066_MemberAggregation_ContractComplete_ContractReceivableRetainage_Foots'
