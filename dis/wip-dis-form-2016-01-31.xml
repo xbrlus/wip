@@ -21,7 +21,7 @@
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
 		<gen:arc order="0.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set-precondition" xlink:from="RULE020_ComplexComputation_PercentComplete1" xlink:to="precondition"/>
 		<link:loc xlink:type="locator" xlink:href="#RULE020_ComplexComputation_PercentComplete" xlink:label="RULE020_ComplexComputation_PercentComplete1"/>
-		<variable:precondition id="precondition" test="$ContractLossRecognitionFlag ne true() or boolean($ContractLossRecognitionFlag) ne true()" xlink:type="resource" xlink:label="precondition"/>
+		<variable:precondition id="precondition" test="($ContractLossRecognitionFlag ne true()) or (boolean($ContractLossRecognitionFlag) ne true())" xlink:type="resource" xlink:label="precondition"/>
 		<variable:variableFilterArc order="3.0" complement="false" cover="true" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="period"/>
 		<pf:period id="period" test="xfi:period-end(.) eq xfi:period-instant(xfi:period($PercentageComplete))" xlink:type="resource" xlink:label="period"/>
 		<variable:variableFilterArc order="2.0" complement="false" cover="true" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="aspectCover"/>
