@@ -19,9 +19,9 @@
 	</link:documentation>
 	<!-- Document information, Entity information, Entity listing information -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
-		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set-precondition" xlink:from="RULE020_ComplexComputation_PercentComplete1" xlink:to="precondition"/>
+		<gen:arc order="0.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set-precondition" xlink:from="RULE020_ComplexComputation_PercentComplete1" xlink:to="precondition"/>
 		<link:loc xlink:type="locator" xlink:href="#RULE020_ComplexComputation_PercentComplete" xlink:label="RULE020_ComplexComputation_PercentComplete1"/>
-		<variable:precondition id="precondition" test="$ContractLossRecognitionFlag ne true()" xlink:type="resource" xlink:label="precondition"/>
+		<variable:precondition id="precondition" test="$ContractLossRecognitionFlag ne true() or boolean($ContractLossRecognitionFlag) ne true()" xlink:type="resource" xlink:label="precondition"/>
 		<variable:variableFilterArc order="3.0" complement="false" cover="true" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="period"/>
 		<pf:period id="period" test="xfi:period-end(.) eq xfi:period-instant(xfi:period($PercentageComplete))" xlink:type="resource" xlink:label="period"/>
 		<variable:variableFilterArc order="2.0" complement="false" cover="true" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="aspectCover"/>
@@ -36,7 +36,7 @@
 		</cf:conceptName>
 		<variable:variableArc name="ContractLossRecognitionFlag" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="RULE020_ComplexComputation_PercentComplete" xlink:to="factVariable"/>
 		<link:loc xlink:type="locator" xlink:href="#RULE020_ComplexComputation_PercentComplete" xlink:label="RULE020_ComplexComputation_PercentComplete"/>
-		<variable:factVariable id="factVariable" bindAsSequence="false" xlink:type="resource" xlink:label="factVariable"/>
+		<variable:factVariable id="factVariable" fallbackValue="false" bindAsSequence="false" xlink:type="resource" xlink:label="factVariable"/>
 		<ea:existenceAssertion id="RULE_Exists_EntityRegistrantName" aspectModel="dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="ASSERTION"/>
 		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="ASSERTION" xlink:to="ASSERTION_Label"/>
 		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">
@@ -929,7 +929,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractRevenueEstimatedRevenue -->
@@ -985,7 +985,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractCostsEstimatedCost -->
@@ -1041,7 +1041,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractCostsEstimatedCost -->
@@ -1097,7 +1097,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractGrossProfitTotalContract -->
@@ -1153,7 +1153,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractGrossProfitTotalContract -->
@@ -1209,7 +1209,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractGrossProfitPercentTotalContract -->
@@ -1265,7 +1265,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractGrossProfitPercentTotalContract -->
@@ -1321,7 +1321,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractRevenueEarnedToDate -->
@@ -1377,7 +1377,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractRevenueEarnedToDate -->
@@ -1433,7 +1433,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractCostsIncurredToDate -->
@@ -1489,7 +1489,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractCostsIncurredToDate -->
@@ -1545,7 +1545,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractGrossProfitFromInceptionToDate -->
@@ -1601,7 +1601,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractGrossProfitFromInceptionToDate -->
@@ -1657,7 +1657,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractRevenueRevenueToComplete -->
@@ -1713,7 +1713,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractRevenueRevenueToComplete -->
@@ -1769,7 +1769,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractCostsEstimatedCostToComplete -->
@@ -1825,7 +1825,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractCostsEstimatedCostToComplete -->
@@ -1881,7 +1881,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractGrossProfitToBeEarned -->
@@ -1937,7 +1937,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractGrossProfitToBeEarned -->
@@ -1993,7 +1993,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - Revenues -->
@@ -2045,7 +2045,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - Revenues -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2096,7 +2096,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - CostOfRevenue -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2147,7 +2147,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - CostOfRevenue -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2198,7 +2198,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - GrossProfit -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2249,7 +2249,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - GrossProfit -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2300,7 +2300,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractBillingsFromInceptionToDate -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2355,7 +2355,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractBillingsFromInceptionToDate -->
@@ -2411,7 +2411,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - BillingsInExcessOfCostAndEarnings -->
@@ -2467,7 +2467,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - AccountsReceivableBilledForLongTermContractsOrPrograms -->
@@ -2523,7 +2523,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - AccountsReceivableBilledForLongTermContractsOrPrograms -->
@@ -2579,7 +2579,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractReceivableRetainage -->
@@ -2635,7 +2635,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractReceivableRetainage -->
@@ -2691,7 +2691,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - BilledContractReceivables -->
@@ -2747,7 +2747,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - BilledContractReceivables -->
@@ -2803,7 +2803,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractGainFade -->
@@ -2855,7 +2855,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractGainFade -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2906,7 +2906,7 @@
 			<asf:aspect>unit</asf:aspect>
 		</asf:aspectCover>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ContractPermanentJobBorrow -->
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -2961,7 +2961,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ContractPermanentJobBorrow -->
@@ -3017,7 +3017,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Complete Contract - ProvisionForLossOnContracts -->
@@ -3073,7 +3073,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
@@ -3128,7 +3128,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<!-- Member Aggregation - Work in Progress Contract - ProvisionForLossOnContracts -->
@@ -3184,13 +3184,13 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
 		<va:valueAssertion id="RULE086_MemberAggregation_ContractInProgress_ContractCostsIncurredToDateExcludingAccruedLoss_Foots" test="$Total eq sum($Each)" aspectModel="dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="ASSERTION_RollUp"/>
 		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="ASSERTION_RollUp" xlink:to="ASSERTION_Label"/>
-		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">Contract Work in Progress ContractCostsIncurredToDateExcludingAccruedLoss foot.</label:label>
+		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">Contract Work in Progress ProvisionForLossOnContracts foot.</label:label>
 		<!-- ARC: (B) to (C)(Formula to Variable) -->
 		<variable:variableArc name="Total" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION_RollUp" xlink:to="VARIABLE_Total"/>
 		<variable:variableArc name="ContractCompleteFlag" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION_RollUp" xlink:to="VARIABLE_ContractCompleteFlag"/>
@@ -3239,7 +3239,7 @@
 		</asf:aspectCover>
 		<pf:period test="xfi:period-end(.) = xfi:period-instant(xfi:period($Total))" xlink:type="resource" xlink:label="FILTER_ContractCompleteFlag"/>
 		<!-- RESOURCE: Member Value filters -->
-		<mf:matchDimension dimension="wip:ContractNumberAxis" variable="ContractCompleteFlag" matchAny="true" xlink:type="resource" xlink:label="FILTER_Each"/>
+		<mf:matchDimension variable="ContractCompleteFlag" matchAny="true" dimension="wip:ContractNumberAxis" xlink:type="resource" xlink:label="FILTER_Each"/>
 		<mf:matchPeriod variable="Total" xlink:type="resource" xlink:label="FILTER_Each"/>
 	</gen:link>
 	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
