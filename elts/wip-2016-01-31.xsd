@@ -10,6 +10,7 @@
    <xsd:annotation>
       <xsd:documentation>This file is the schema file for work in process (wip). The DTS starting with this schema file will not contain any linkbases.</xsd:documentation>
    </xsd:annotation>
+   <xsd:element id="wip_SBAIdentificationNumber" name="SBAIdentificationNumber" nillable="true" substitutionGroup="xbrli:item" type="wip:SBADigitItemType" xbrli:periodType="duration"/>   
    <xsd:element abstract="true" id="wip_WorkInProcessTable" name="WorkInProcessTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration"/>
    <xsd:element abstract="true" id="wip_ContractNumberAxis" name="ContractNumberAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrldt:typedDomainRef="#wip_ContractNumberAxis.domain" xbrli:periodType="duration"/>
    <xsd:element abstract="true" id="wip_ContractDetailsLineItems" name="ContractDetailsLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
@@ -59,4 +60,12 @@
    <xsd:element abstract="false" id="wip_ContractPermanentJobBorrow" name="ContractPermanentJobBorrow" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant"/>
    <xsd:element abstract="false" id="wip_ContractCostsIncurredToDateExcludingAccruedLoss" name="ContractCostsIncurredToDateExcludingAccruedLoss" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant"/>
    <xsd:element abstract="true" id="wip_ContractCostsFromInceptionToDateAbstract" name="ContractCostsFromInceptionToDateAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
+   <xsd:complexType name="SBADigitItemType">
+     <xsd:simpleContent>
+       <xsd:restriction base="xbrli:tokenItemType">
+	     <xsd:pattern value="[1-2][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+	     <xsd:attributeGroup ref="xbrli:nonNumericItemAttrs"/>
+	   </xsd:restriction>
+	  </xsd:simpleContent>
+	</xsd:complexType>   
 </xsd:schema>
