@@ -6,8 +6,8 @@
   xmlns:link="http://www.xbrl.org/2003/linkbase"
   xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric"
   xmlns:num="http://www.xbrl.org/dtr/type/numeric"
-  xmlns:wip="http://xbrl.us/wip/2016-01-31"
-  xmlns:us-gaap-std="http://fasb.org/us-gaap-std/2016-01-31"
+  xmlns:wip="http://xbrl.us/wip/2021-01-31"
+  xmlns:us-gaap-std="http://fasb.org/us-gaap-std/2021-01-31"
   xmlns:xbrldt="http://xbrl.org/2005/xbrldt"
   xmlns:xbrli="http://www.xbrl.org/2003/instance"
   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -15,16 +15,16 @@
   blockDefault=""
   elementFormDefault="qualified"
   finalDefault=""
-  targetNamespace="http://xbrl.us/wip-std/2016-01-31">
+  targetNamespace="http://xbrl.us/wip-std/2021-01-31">
   <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd"/>
   <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
   <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
   <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
-  <xsd:import namespace="http://fasb.org/us-gaap-std/2016-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2016/elts/us-gaap-std-2016-01-31.xsd"/>
-  <xsd:import namespace="http://xbrl.us/wip/2016-01-31" schemaLocation="wip-2016-01-31.xsd"/>
+  <xsd:import namespace="http://fasb.org/us-gaap-std/2021-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2021/elts/us-gaap-std-2021-01-31.xsd"/>
+  <xsd:import namespace="http://xbrl.us/wip/2021-01-31" schemaLocation="wip-2021-01-31.xsd"/>
   <xsd:annotation>
     <xsd:appinfo>
-        <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-lab-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple"/>
+        <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-lab-2021-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple"/>
   </xsd:appinfo>
     <xsd:documentation>This file is an entry point for us-gaap (us-gaap). The DTS starting with this entry point includes the concepts defined in us-gaap (us-gaap) with their standard, period start, period end,
       total and axis default labels. It will not include references. It will not include presentation, calculation or definition linkbases.</xsd:documentation>
