@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+   <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
+      <link:label id="id_5c888747" xlink:label="lbl_label1552451399" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en">Specify the type of bond, for example performance or payment bond.</link:label>
+      <link:label id="id_4f4aa177" xlink:label="lbl_label1330291063" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en">Contract Bond Type</link:label>
+      <link:loc xlink:href="wip-all-2016-01-31.xsd#id_ContractBondType" xlink:label="lbl_ContractBondType" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBondType" xlink:to="lbl_label1330291063" xlink:type="arc"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBondType" xlink:to="lbl_label1552451399" xlink:type="arc"/>
+   </link:labelLink>
+</link:linkbase>
