@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--(c) XBRL US, Inc. 2016;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:us-gaap-all="http://fasb.org/us-gaap-all/2016-01-31" xmlns:wip-std="http://xbrl.us/wip-std/2016-01-31" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" blockDefault="" elementFormDefault="qualified" finalDefault="" targetNamespace="http://xbrl.us/wip-all/2016-01-31">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:us-gaap-all="http://fasb.org/us-gaap-all/2016-01-31" xmlns:wip="http://xbrl.us/wip/2016-01-31" xmlns:wip-entryPoint-all="http://xbrl.us/wip-entryPoint-all/2016-01-31" xmlns:wip-std="http://xbrl.us/wip-std/2016-01-31" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" blockDefault="" elementFormDefault="qualified" finalDefault="" targetNamespace="http://xbrl.us/wip-all/2016-01-31">
+   <xsd:import namespace="http://xbrl.us/wip/2016-01-31" schemaLocation="wip-2016-01-31.xsd"/>
+   <xsd:import namespace="http://xbrl.us/wip-entryPoint-all/2016-01-31" schemaLocation="../entire/wip-entryPoint-all-2016-01-31.xsd"/>
    <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd"/>
    <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
    <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
@@ -12,8 +14,9 @@
    <xsd:annotation>
       <xsd:appinfo>
         <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-ref-2016-01-31.xml" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:type="simple"/>
-  		</xsd:appinfo>
+  		<link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="wip-all-2016-01-31_lab_en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple"/></xsd:appinfo>
       <xsd:documentation>This file is an entry point for work in process (wip) including all the us-gaap files. The DTS starting with this entry point includes the concepts defined in the work in process (wip) and us-gaap (us-gaap) with their standard, period start, period end,
       total, axis default, documentation, deprecated label and deprecated date labels. It will also include references. It will not include presentation, calculation or definition linkbases.</xsd:documentation>
    </xsd:annotation>
+   <xsd:element abstract="false" id="id_ContractBondType" name="ContractBondType" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
 </xsd:schema>
