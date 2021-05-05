@@ -122,8 +122,6 @@
       <link:loc xlink:href="../elts/wip-2021-01-31.xsd#wip_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:label="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="locator"/>
       <link:presentationArc order="4.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDateExcludingAccruedLoss" xlink:type="arc"/>
       <link:presentationArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractCostsFromInceptionToDateAbstract" xlink:to="lbl_ContractCostsIncurredToDate" xlink:type="arc"/>
-      <link:loc xlink:href="../elts/wip-2021-01-31.xsd#wip_SBAIdentificationNumber" xlink:label="lbl_SBAIdentificationNumber" xlink:type="locator"/>
-      <link:presentationArc order="1.7" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractorsAbstract" xlink:to="lbl_SBAIdentificationNumber" xlink:type="arc"/>
       <link:loc xlink:href="../elts/wip-2021-01-31.xsd#wip_ContractBondNumber" xlink:label="lbl_ContractBondNumber" xlink:type="locator"/>
       <link:presentationArc order="7.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformationAbstract" xlink:to="lbl_ContractBondNumber" xlink:type="arc"/>
       <link:presentationArc order="8.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="lbl_ContractBasicInformationAbstract" xlink:to="lbl_ContractBondType1" xlink:type="arc"/>
