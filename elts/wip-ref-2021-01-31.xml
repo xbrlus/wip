@@ -520,5 +520,11 @@
       </link:reference>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_SocialSecurityNumber" xlink:label="lbl_SocialSecurityNumber" xlink:type="locator"/>
       <link:referenceArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="lbl_SocialSecurityNumber" xlink:to="lbl_reference1662106909" xlink:type="arc"/>
+      <link:reference id="id_7c0e9cd2" xlink:label="lbl_reference2081332434" xlink:role="http://www.xbrl.org/2003/role/reference" xlink:type="resource">
+         <ref:Publisher>Surety and Fidelity Association of America</ref:Publisher>
+         <ref:Name>Surety Bond Form Index (SBFI) Bond Types/Subtypes</ref:Name>
+      </link:reference>
+      <link:loc xlink:href="wip-2021-01-31.xsd#wip_ContractBondType" xlink:label="lbl_ContractBondType" xlink:type="locator"/>
+      <link:referenceArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="lbl_ContractBondType" xlink:to="lbl_reference2081332434" xlink:type="arc"/>
    </link:referenceLink>
 </link:linkbase>

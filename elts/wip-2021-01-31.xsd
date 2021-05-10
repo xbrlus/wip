@@ -73,12 +73,17 @@
    <xsd:complexType abstract="false" mixed="false" name="contractBondTypeItemType">
       <xsd:simpleContent>
          <xsd:restriction base="xbrli:stringItemType">
-            <xsd:enumeration value="Performance"/>
-            <xsd:enumeration value="Payment"/>
-            <xsd:enumeration value="Payment and Performance"/>
+            <xsd:enumeration value="Performance Bond"/>
+            <xsd:enumeration value="Payment Bond"/>
+            <xsd:enumeration value="Payment and Performance Bond"/>
+            <xsd:enumeration value="Bid Bond"/>
+            <xsd:enumeration value="Contract or Contractors Bond"/>
+            <xsd:enumeration value="Maintenance Bond"/>
+            <xsd:enumeration value="Retainage Bond"/>
+            <xsd:enumeration value="Subdivision Bond"/>
          </xsd:restriction>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:element abstract="false" id="wip_ContractBondType" name="ContractBondType" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration"/>
    <xsd:element abstract="false" id="wip_SocialSecurityNumber" name="SocialSecurityNumber" nillable="true" substitutionGroup="xbrli:item" type="dei:nineDigitItemType" xbrli:periodType="duration"/>
+   <xsd:element abstract="false" id="wip_ContractBondType" name="ContractBondType" nillable="true" substitutionGroup="xbrli:item" type="wip:contractBondTypeItemType" xbrli:periodType="duration"/>
 </xsd:schema>
