@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!--(c) XBRL US, Inc. 2016;
+<!--(c) XBRL US, Inc. 2021;
  All Rights Reserved.Notice: Authorized Uses are Set Forth at https://xbrl.us/home/about/legal/wip_legal -->
 <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
    <link:roleRef roleURI="http://fasb.org/us-gaap/role/label/axisDefault" xlink:href="http://xbrl.fasb.org/us-gaap/2021/elts/us-roles-2021-01-31.xsd#axisDefault" xlink:type="simple"/>
@@ -217,11 +217,11 @@
       <link:label id="id_4f4aa177" xlink:label="lbl_ContractBondType_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en">Contract Bond Type</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_ContractBondType" xlink:label="lbl_ContractBondType" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractBondType" xlink:to="lbl_ContractBondType_labels" xlink:type="arc"/>
-      <link:label id="id_5c888747" xlink:label="lbl_ContractBondType_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en">Specify the type of bond, for example performance or payment bond.</link:label>
+      <link:label id="id_5c888747" xlink:label="lbl_ContractBondType_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en">Specify the type of bond, which can be Bid Bond, Contractors or Contract Bond, Maintenance Bond, Performance Bond, Payment Bond, Payment and Performance Bond, Retainage Bond, or Subdivision Bond. </link:label>
       <link:label id="id_5c5e60d3" xlink:label="lbl_SocialSecurityNumber_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Social Security Number</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_SocialSecurityNumber" xlink:label="lbl_SocialSecurityNumber" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_SocialSecurityNumber" xlink:to="lbl_SocialSecurityNumber_labels" xlink:type="arc"/>
-      <link:label id="id_61fa3de0" xlink:label="lbl_SocialSecurityNumber_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">dup_1_The Tax Identification Number (TIN), also known as an Employer Identification Number (EIN), is a unique 9-digit value assigned by the IRS.</link:label>
+      <link:label id="id_61fa3de0" xlink:label="lbl_SocialSecurityNumber_labels" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Social security number of the contractor.</link:label>
    </link:labelLink>
    <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
       <link:label id="id_1381bfd" xlink:label="lbl_label20454397" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Contract Receivables [Abstract]</link:label>
