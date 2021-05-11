@@ -1,4 +1,4 @@
-# 2016 Surety Work in Process Taxonomy
+# Surety Work in Process Taxonomy
 
 The folders and files in the master branch of this repository are current production version of the Surety Work in Process reporting.
 
