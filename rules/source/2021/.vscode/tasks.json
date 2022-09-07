@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile 2021 Rules",
+            "type": "shell",
+            "command": "python3.9 ~/arelle/Arelle-master/arellecmdline.py --plugins xule --xule-compile /Users/campbellpryde/Documents/GitHub/wip-2016-01-31/rules/source/2021 --xule-rule-set /Users/campbellpryde/Documents/GitHub/wip-2016-01-31/rules/wip-us-2021-v1-ruleset.zip --xule-crash"
+        }
+    ]
+}

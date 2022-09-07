@@ -1,0 +1,39 @@
+/**
+DQC Rules
+ (c) Copyright 2017 - 2022, XBRL US Inc. All rights reserved.
+ See https://xbrl.us/dqc-license for license information.
+ See https://xbrl.us/dqc-patent for patent infringement notice.
+Taxonomy: US GAAP 2021
+**/
+
+
+rule-name-prefix WIP
+
+assert US.0001.01 satisfied
+
+$rule_id = (rule-name().split('.'))[rule-name().split('.').length];
+
+list({covered @concept = wip:ContractName}).length  == 0
+
+message
+
+"The submission does not include any contract names.  Please ensure that the ContractName field is used to idendify the WIP contract.
+
+Rule version: {$ruleVersion}"
+
+severity error
+
+assert US.0001.02 satisfied
+
+$rule_id = (rule-name().split('.'))[rule-name().split('.').length];
+
+list({covered @concept in list(wip:SocialSecurityNumber, dei:EntityTaxIdentificationNumber)}).length  == 0 
+
+message
+
+"The submission does not include either the SocialSecurityNumber or the EntityTaxIdentificationNumber of the contractopr.  Please ensure that these fields are included in the filing.
+
+Rule version: {$ruleVersion}"
+
+severity error
+

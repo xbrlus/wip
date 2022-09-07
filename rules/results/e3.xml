@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log>
+<entry code="info" level="info">
+ <message>[info] Activation of plug-in XBRL rule processor (xule) successful, version Check version using Tools->Xule->Version on the GUI or --xule-version on the command line. - xule </message>
+ <ref href="xule"/></entry>
+<entry code="info" level="info">
+ <message>[info] Activation of plug-in SEC Inline Transforms successful, version 19.2. - transforms/SEC </message>
+ <ref href="transforms/SEC"/></entry>
+<entry code="info" level="info">
+ <message>[info] Xule version: 3.0.23374 - </message>
+ <ref href=""/></entry>
+<entry code="info" level="info">
+ <message>[info] loaded in 8.83 secs at 2022-09-07T10:48:13 - https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml </message>
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml"/></entry>
+<entry code="" level="info">
+ <message>[] Formula xpath2 grammar initialized in 1.17 secs - </message>
+ <ref href=""/></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=25.00) must match the formula 1 - [Estimated Costs to Complete (=1500) / Estimated Costs (=2000)] = .25 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 511, 521, 526</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_4.ContractCostsEstimatedCost" sourceLine="521">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-11">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>5&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="2,000"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_4.ContractCostsEstimatedCostToComplete" sourceLine="511">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-11">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>5&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="1,500"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_4.PercentageComplete" sourceLine="526">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-11">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>5&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="25.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=42.00) must match the formula 1 - [Estimated Costs to Complete (=1400) / Estimated Costs (=2400)] = .42 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 360, 370, 375</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_3.ContractCostsEstimatedCost" sourceLine="370">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-08">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>3&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="2,400"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_3.ContractCostsEstimatedCostToComplete" sourceLine="360">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-08">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>3&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="1,400"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_3.PercentageComplete" sourceLine="375">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-08">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>3&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="42.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=98.00) must match the formula 1 - [Estimated Costs to Complete (=100) / Estimated Costs (=6100)] = .98 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 813, 823, 828</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_6.ContractCostsEstimatedCost" sourceLine="823">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-17">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>6&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="6,100"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_6.ContractCostsEstimatedCostToComplete" sourceLine="813">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-17">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>6&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="100"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_6.PercentageComplete" sourceLine="828">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-17">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>6&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="98.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=92.00) must match the formula 1 - [Estimated Costs to Complete (=100) / Estimated Costs (=1300)] = .92 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 209, 219, 224</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_2.ContractCostsEstimatedCost" sourceLine="219">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-05">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>2&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="1,300"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_2.ContractCostsEstimatedCostToComplete" sourceLine="209">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-05">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>2&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="100"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_2.PercentageComplete" sourceLine="224">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-05">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>2&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="92.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=29.00) must match the formula 1 - [Estimated Costs to Complete (=5000) / Estimated Costs (=7000)] = .29 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 662, 672, 677</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_5.ContractCostsEstimatedCost" sourceLine="672">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-14">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>7&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="7,000"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_5.ContractCostsEstimatedCostToComplete" sourceLine="662">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-14">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>7&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="5,000"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_5.PercentageComplete" sourceLine="677">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-14">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>7&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="29.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=0.00) must match the formula 1 - [Estimated Costs to Complete (=8400) / Estimated Costs (=19200)] = .56 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 947, 957, 962</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIPTotal.r_1.ContractCostsEstimatedCost" sourceLine="957">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-19">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractCompleteOrIncompleteAxis" value="wip:ContractInProcessMember"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="19,200"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIPTotal.r_1.ContractCostsEstimatedCostToComplete" sourceLine="947">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-19">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractCompleteOrIncompleteAxis" value="wip:ContractInProcessMember"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="8,400"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIPTotal.r_1.PercentageComplete" sourceLine="962">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-19">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractCompleteOrIncompleteAxis" value="wip:ContractInProcessMember"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="0.00"/>
+ </ref></entry>
+<entry code="message:RULE020_ComplexComputation_PercentComplete" level="error">
+ <message label="Percentage complete computation is correct.">[message:RULE020_ComplexComputation_PercentComplete] Percent Complete (=25.00) must match the formula 1 - [Estimated Costs to Complete (=300) / Estimated Costs (=400)] = .25 in Contract No. None - http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml 613, https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml 55, 65, 73</message>
+ <ref href="http://taxonomies.xbrl.us/wip/2021/dis/wip-dis-form-2021-01-31.xml#RULE020_ComplexComputation_PercentComplete" sourceLine="613">
+  <property name="id" value="RULE020_ComplexComputation_PercentComplete"/>
+  <property name="label" value="ASSERTION"/>
+  <property name="aspectModel" value="dimensional"/>
+  <property name="implicitFiltering" value="true"/>
+  <property name="test" value="abs((($PercentageComplete * 100)) - (if($ContractCostsEstimatedCost ne 0) then ((1-($ContractCostsEstimatedCostToComplete div $ContractCostsEstimatedCost)) * 100) else 0)) le 1"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_1.ContractCostsEstimatedCost" sourceLine="65">
+  <property name="label" value="Contract Costs, Estimated Cost"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCost"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCost"/>
+  <property name="contextRef" value="c-02">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>1&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="400"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_1.ContractCostsEstimatedCostToComplete" sourceLine="55">
+  <property name="label" value="Contract Costs, Estimated Cost to Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="ContractCostsEstimatedCostToComplete"/>
+  <property name="QName" value="wip:ContractCostsEstimatedCostToComplete"/>
+  <property name="contextRef" value="c-02">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>1&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-01 ($)">
+   <property name="measure" value="iso4217:USD"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="300"/>
+ </ref>
+ 
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml#WIP.r_1.PercentageComplete" sourceLine="73">
+  <property name="label" value="Percent Complete"/>
+  <property name="namespace" value="http://xbrl.us/wip/2021-01-31"/>
+  <property name="name" value="PercentageComplete"/>
+  <property name="QName" value="wip:PercentageComplete"/>
+  <property name="contextRef" value="c-02">
+   <property name="entity" value="2XYZ Construction">
+    <property name="scheme" value="http://irs.gov/entity/identification/scheme"/>
+   </property>
+   <property name="instant" value="2017-12-31"/>
+   <property name="dimensions" value="(1)">
+    <property name="wip:ContractNumberAxis" value="&lt;wip:ContractNumberAxis.domain>1&lt;/wip:ContractNumberAxis.domain>
+                
+"/>
+   </property>
+  </property>
+  <property name="unitRef" value="u-02 (pure)">
+   <property name="measure" value="pure"/>
+  </property>
+  <property name="decimals" value="INF"/>
+  <property name="precision" value="None"/>
+  <property name="xsi:nil" value="false"/>
+  <property name="value" value="25.00"/>
+ </ref></entry>
+<entry code="WIP.US.0001.02" level="error">
+ <message filing_url="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml" severity="error" cid="4365262704">[WIP.US.0001.02] The submission does not include either the SocialSecurityNumber or the EntityTaxIdentificationNumber of the contractopr.  Please ensure that these fields are included in the filing.
+
+Rule version: 1.0.0 - </message></entry>
+<entry code="info" level="info">
+ <message>[info] validated in 5.58 secs - https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml </message>
+ <ref href="https://files.xbrl.us/files/nasbp_wip_spreadsheet_template_revised.xml"/></entry>
+</log>
