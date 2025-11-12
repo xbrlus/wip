@@ -85,14 +85,14 @@
 		<ea:existenceAssertion id="RULE_Exists_DocumentFiscalYearFocus" aspectModel="dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="ASSERTION"/>
 		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="ASSERTION" xlink:to="ASSERTION_Label"/>
 		<label:label xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="ASSERTION_Label" xml:lang="en">
-			Document Fiscal Year Focus (dei:DocumentFiscalYearFocus) required in this component.
+			Document Fiscal Year Focus (wip:DocumentFiscalYearFocus) required in this component.
 		 </label:label>
 		<variable:factVariable bindAsSequence="false" xlink:type="resource" xlink:label="FACT_VARIABLE_ThisConcept"/>
 		<variable:variableArc name="v1" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="ASSERTION" xlink:to="FACT_VARIABLE_ThisConcept"/>
 		<variable:variableFilterArc order="1.0" complement="false" cover="true" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="FACT_VARIABLE_ThisConcept" xlink:to="FILTER_ThisConcept"/>
 		<cf:conceptName xlink:type="resource" xlink:label="FILTER_ThisConcept">
 			<cf:concept>
-				<cf:qname>dei:DocumentFiscalYearFocus</cf:qname>
+				<cf:qname>wip:DocumentFiscalYearFocus</cf:qname>
 			</cf:concept>
 		</cf:conceptName>
 	</gen:link>

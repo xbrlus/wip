@@ -13,12 +13,19 @@
       <link:label id="id_4b3fd1" xlink:label="lbl_label4931537" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Details [Line Items]</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_ContractDetailsLineItems" xlink:label="lbl_ContractDetailsLineItems" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractDetailsLineItems" xlink:to="lbl_label4931537" xlink:type="arc"/>
+      
       <link:label id="id_f434dd" xlink:label="lbl_ContractNumber_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Identifier</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_ContractNumber" xlink:label="lbl_ContractNumber" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractNumber" xlink:to="lbl_ContractNumber_labels" xlink:type="arc"/>
+      
       <link:label id="id_39493b" xlink:label="lbl_ContractName_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Name</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_ContractName" xlink:label="lbl_ContractName" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ContractName" xlink:to="lbl_ContractName_labels" xlink:type="arc"/>
+      
+      <link:label id="id_dk3rfdf" xlink:label="lbl_DocumentFiscalPeriodFocus_labels" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Document Fiscal Period Focus (WIP)</link:label>
+      <link:loc xlink:href="wip-2021-01-31.xsd#wip_DocumentFiscalPeriodFocus" xlink:label="lbl_DocumentFiscalPeriodFocus" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_DocumentFiscalPeriodFocus" xlink:to="lbl_DocumentFiscalPeriodFocus_labels" xlink:type="arc"/>
+      
       <link:label id="id_91e31a" xlink:label="lbl_label26617937" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of costs incurred to date for the specified contract. The contract costs include any accrued loss.</link:label>
       <link:label id="id_147b560" xlink:label="lbl_label16102948" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount of estimated cost remaining for the specified contract.</link:label>
       <link:label id="id_43897a" xlink:label="lbl_label17269457" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:type="resource" xml:lang="en-US">Amount expected to be recognized in earnings for the specified contract over its life.</link:label>
@@ -129,6 +136,11 @@
       <link:label id="id_4109c4" xlink:label="lbl_label4262340" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Work In Process Schedule [Table Text Block]</link:label>
       <link:loc xlink:href="wip-2021-01-31.xsd#wip_WorkInProcessScheduleTableTextBlock" xlink:label="lbl_WorkInProcessScheduleTableTextBlock" xlink:type="locator"/>
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_WorkInProcessScheduleTableTextBlock" xlink:to="lbl_label4262340" xlink:type="arc"/>
+
+      <link:label id="id_mda" xlink:label="lbl_labelmda1" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Management Discussion And Analysis [Text Block]</link:label>
+      <link:loc xlink:href="wip-2021-01-31.xsd#wip_ManagementDiscussionAndAnalysisTextBlock" xlink:label="lbl_ManagementDiscussionAndAnalysisTextBlock" xlink:type="locator"/>
+      <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_ManagementDiscussionAndAnalysisTextBlock" xlink:to="lbl_labelmda1" xlink:type="arc"/>
+
       <link:labelArc order="1.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="lbl_WorkInProcessScheduleTableTextBlock" xlink:to="lbl_label30051367" xlink:type="arc"/>
       <link:label id="id_199f87a" xlink:label="lbl_label26867834" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Basic Information [Abstract]</link:label>
       <link:label id="id_1a05438" xlink:label="lbl_label27284536" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Contract Percent Complete Information [Abstract]</link:label>
